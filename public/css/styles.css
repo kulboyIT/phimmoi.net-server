@@ -1,0 +1,732 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+}
+
+html, body {
+    background-color: #5b5b5b;
+    height: 100%; 
+}
+
+/* thin scrollbar */
+.movie-dl-list::-webkit-scrollbar,
+.right-box-content::-webkit-scrollbar,
+.tab-content::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.movie-dl-list::-webkit-scrollbar-track,
+.right-box-content::-webkit-scrollbar-track, 
+.tab-content::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.movie-dl-list::-webkit-scrollbar-thumb,
+.right-box-content::-webkit-scrollbar-thumb,
+.tab-content::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 2px solid #292929;
+}
+
+@media only screen and (max-width: 1000px) {
+    .custom-container {
+        width: 100%;
+        margin: auto;
+    }    
+
+    div[class^="col"] {
+        padding: 5px;
+    }
+
+    .header-logo {
+        text-align: center;
+    }
+
+    .header-logo a img {
+        width: 200px;
+        height: auto;
+        margin: auto;
+        margin-top: 50px;
+    }
+
+    .col-sm-4 {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .custom-container {
+        max-width: 1300px;
+        margin: auto;
+    }    
+
+    .header-logo a img {
+        width: 300px;
+        height: auto;
+        padding-top: 20px;
+        margin: auto;
+    }
+}
+
+body {
+    margin-top: -20px;
+}
+
+header {
+    background-color: #1d1d1d;
+    width: 100%;
+    min-height: 86px;
+    height: auto;
+    border-bottom: 3px solid #5c5c5c;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #f7e148;
+}
+
+hr {
+    border-bottom: 1px solid #7f7f7f;
+    margin: 10px 0   ;
+}
+
+.row {
+    margin: 20px 0;
+}
+
+.header-logo {
+    width: 400px;
+    height: 100%;
+    margin: auto;
+}
+
+.header-logo a{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.search-widget {
+    height: 100%;
+    width: 350px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.search-widget form{
+    height: 100%;
+    width: 100%;
+    max-height: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.search-widget form input{
+    height: 25px;
+    width: 80%;
+    text-align: center;
+}
+
+
+.nav-section {
+    background-color: #333333;
+    border-bottom: 1px solid #b4b4b4;  
+    position: relative;
+}
+
+.nav-section .nav-link {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.nav-section .nav-link:hover {
+    background-color: #1e1e1e;
+}
+
+.title {
+    color: #f7e148;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.top-movie-list {
+    width: 100%;
+    height: 400px;
+    background-color: #252525;
+    padding: 15px 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.top-movie-wrapper {
+    width: 20000px;
+    height: 100%;
+    overflow: auto;
+}
+
+.section-title {
+    color: #f7e148;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.main .carousel {
+    width: 100%;
+    height: 330px;
+    background-color: #252525;
+    padding: 10px 20px;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+    width: 100%;
+    padding: 10px 0;
+}
+
+footer .cate-title {
+    color: #f7e148;
+    font-size: 1.5rem;
+}
+
+footer .cate-list-group,
+footer .contacts,
+footer .logo  {
+    margin-left: 10px;
+}
+
+footer .logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+footer .cate-item a{
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.movie-thumb-big {
+    background-image: url('http://image.phimmoi.net/film/8359/poster.thumb.jpg');
+    background-size: 100% 100%;
+    width: 275px;
+    height: 100%;
+    margin: 0 5px;
+    display: inline-block;
+    position: relative;
+}
+
+.movie-thumb-big .movie-info {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #000000a8;
+    padding: 10px 20px;
+}
+
+a:hover .movie-thumb-big {
+    color: #fff;
+}
+
+.movie-thumb-big .movie-info .movie-title-vn{
+    color: #ff8000;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.movie-thumb-big .time {
+    padding: 5px 10px;
+    background-color: #bf0000;
+    width: 90px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.movie-update {
+    background-color: #292929;
+    height: 670px;
+}
+
+.movie-update .nav-link{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.movie-update .nav-link:hover{
+    color: #ff8000;
+}
+
+.movie-thumb-sm {
+    height: 90px;
+    width: 100%;
+    border-bottom: 1px dashed #7f7f7f;
+    padding: 5px 12px;
+    overflow: hidden;
+}
+
+.movie-thumb-sm .movie-info {
+    height: 90%;
+    width: 60%;
+    float: left;
+    margin: 0 3px;
+}
+
+.movie-thumb-sm a {
+    width: 100%;
+    height: 100%;   
+}
+
+.movie-thumb-sm .time {
+    height: 80%;
+    width: 90px;
+    float: right;
+    margin: 0 3px;
+}
+
+.movie-thumb-sm .figure {
+    border: 1px solid #fff;
+    background-image: url('http://image.phimmoi.net/film/8359/poster.thumb.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 90%;
+    width: 70px;
+    float: left;
+    margin: 5px;
+}
+
+.movie-thumb-sm .movie-info .movie-title-vn {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.movie-update .tab-content {
+    height: 627px;
+    overflow: hidden;
+}
+
+.movie-update .tab-content .tab-pane {
+    height: auto;
+}
+
+
+.movie-cate {
+    margin-top: 10px;
+}
+
+.movie-cate-header {
+    height: 30px;
+    position: relative;
+}
+
+.movie-cate-header .section-title {
+    float: left;
+}
+
+.movie-cate-header .more-btn {
+    float: right;
+}
+
+.movie-cate-header a {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 1.2rem;
+}
+
+.movie-cate-header a:hover {
+    color: #e7cb0a;
+}
+
+.movie-cate .movie-cate-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding:5px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.movie-cate .movie-cate-list ul li {
+    display: inline-block;
+    height: 260px;
+    width: 189px;
+    margin: 5px 3px;
+    background-image: url('http://image.phimmoi.net/film/8359/poster.thumb.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.movie-cate .movie-cate-list ul li .movie-thumb-md {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.movie-thumb-md .time {
+    padding: 5px 10px;
+    background-color: #bf0000;
+    width: 90px;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.movie-thumb-md .movie-info {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    background-color: #000000a8;
+    padding: 10px 20px;
+}
+
+.movie-thumb-md .movie-title-vn{
+    font-size: 1.2rem;
+    color: #ff8000;
+    font-weight: bold;
+}
+
+a:hover .movie-thumb-md {
+    color: #fff;
+}
+
+.top-movie-list .prev-btn,
+.top-movie-list .next-btn {
+    width: 45px;
+    height: 90px;
+    background-color: rgba(217, 217, 217, 0.37);
+    position: absolute;
+    top: 150px;
+    z-index: 100;
+    background-image: url('../images/icons/arrow.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 4px 23px;
+}
+
+.top-movie-list .prev-btn:hover,
+.top-movie-list .next-btn:hover {
+    background-color: rgba(217, 217, 217, 0.64);
+}
+
+.top-movie-list .prev-btn {
+    left: 0;
+    transform: rotate(180deg);
+}
+
+.top-movie-list .next-btn {
+    right: 0;
+    transform: rotate(0deg);
+}
+
+.right-box {
+    width: 100%;
+    height: 665px;
+}
+
+.right-box .right-box-title {
+    height: 50px;
+    width: 100%;    
+}
+
+.right-box .right-box-content {
+    background-color: #292929;
+    height: 610px;
+    width: 100%;
+    overflow: auto;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+.right-box .right-box-content .content-wrapper {
+    overflow: auto;
+}
+
+.right-box .right-box-content .content-wrapper .movie-thumb-sm{
+    height: 150px;
+    padding: 0;
+}
+
+.right-box .right-box-content .content-wrapper .movie-thumb-sm .figure{
+    height: 90%;
+    width: 100px;
+}
+
+.tag-box {
+    list-style-type: none;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.tag-item {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 5px;
+    background-color: #5b5b5b;
+    color: #fff;
+}
+
+.tag-item a {
+    font-size: 1.3rem;
+}
+
+.tag-box-container {
+    height: auto;
+}
+
+.tag-box-container .right-box-content{
+    height: auto;
+    text-align: left;
+}
+
+.right-box-content .movie-info,
+.movie-thumb-md .movie-info {
+    text-align: left;
+}
+
+a:hover .movie-thumb-sm .figure {
+    opacity: 0.7;
+}
+
+a:hover .movie-thumb-big .movie-info .movie-title-vn,
+a:hover .movie-thumb-md .movie-info .movie-title-vn {
+    color: #f7e148;
+}
+
+.breadcrumb-nav {
+    width: 100%;
+    margin: 0 15px;
+}
+
+.breadcrumb {
+    background-color: #252525;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.breadcrumb .breadcrumb-item{
+    font-size: 1.2rem;
+}
+
+.breadcrumb .breadcrumb-item a{
+    color: #03a9f4;
+    font-size: 1.2rem;
+}
+
+.breadcrumb .breadcrumb-item a:hover{
+    color: #f7e148;
+}
+
+.section {
+    background-color: #282828;
+    width: 100%;
+    height: auto;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.details {
+    width: 100%;
+    height: 550px;
+    background-color: #1d1d1d;
+    margin: 0;
+}
+
+.details .thumb {
+    position: relative;
+    padding: 0;
+    height: 98%;
+    width: 47%;
+    background-image: url('http://image.phimmoi.net/film/8359/poster.thumb.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 5px;
+    float: left;
+}
+
+.details .thumb .btns {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000000a8;
+    height: auto;
+}
+
+.details .thumb .btns .btn {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    margin: 13px 3px;
+}
+
+.details .movie-info {
+    height: 98%;
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.details .movie-info .title {
+    z-index: 100;
+}
+
+.details .movie-info .movie-title .movie-title-vn {
+    color: #f7e148;
+    font-size: 2.5rem;
+    font-weight: thin;
+}
+
+.details .movie-info .movie-title .movie-title-en {
+    color: #909090;
+    font-size: 1.5rem;
+    font-weight: thin;
+}
+
+.details .movie-info .movie-dl-list {
+    background-color: #252525;
+    margin: 5px;
+    padding: 5px;
+    overflow: auto;
+    height: 300px;
+}
+
+.details .movie-info .movie-dl-list .movie-dl-item .dl-title{
+    font-size: 1.2rem;
+    color: #b5b5b5;
+    font-weight: bold;
+}
+
+.details .movie-info .movie-dl-list .movie-dl-item .dl-value{
+    font-size: 1.2rem;
+    color: #b5b5b5;
+    font-weight: thin;
+}
+
+.details .movie-info .movie-rating {
+    background-color: #252525;
+    margin: 5px;
+    padding: 5px;
+    overflow: auto;
+    height: 100px;
+}
+
+.details .movie-info .movie-rating .dl-title-bg {
+    color: #f7e148;
+    font-size: 1.5rem;
+}
+
+.star-rating {
+    color: #b5b5b5;
+    font-size: 1.5rem;
+    padding: none;
+}
+
+.star-rating .fa-star.checked {
+    color: #f7e148;
+    font-size: 1.5rem;
+    padding: none;
+}
+
+.section-sm {
+    padding: 5px;
+    margin: 10px 5px;
+    background-color: #1d1d1d;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.summary-content {
+    color: #b5b5b5;
+    font-size: 1.5rem;
+}
+
+.title-sm {
+    color: #f7e148;
+    font-size: 2rem;
+    padding: none;
+    margin: 10px 0;
+}
+
+figure {
+    padding: 10px;
+    max-height: 100%;
+}
+
+figure img{
+    padding: 0;
+    margin: 0;
+    max-height: 100%;
+}
+
+.watching-window {
+    margin: 5px;
+    width: calc(100% - 10px);
+    height: auto;
+}
+
+.details-sm {
+    width: 100%;
+    height: 260px;
+    background-color: #1d1d1d;
+    margin: 0;
+    overflow: hidden;
+}
+
+.details-sm .thumb-sm {
+    position: relative;
+    padding: 0;
+    height: 98%;
+    width: 25%;
+    background-image: url('http://image.phimmoi.net/film/8359/poster.thumb.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: 5px;
+    float: left;
+}
+
+.details-sm .thumb-sm .btns {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000000a8;
+    height: auto;
+}
+
+.details-sm .thumb-sm .btns .btn {
+    padding: 10px 20px;
+    font-size: 1.3rem;
+    margin: 13px 3px;
+}
+
+
+.dropdown-list {
+    width: auto;
+    height: 200px;
+    position: absolute;
+    background-color: #353535;
+    top: 100%;
+    z-index: 1000;
+    display: none;
+}
+
+.dropdown-list .dropdown-item {
+    color: #fff;
+    font-size: 1.3rem;
+}

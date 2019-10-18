@@ -1,0 +1,21 @@
+{
+  "name": "phimmoi.net",
+  "description": "Clone phimmoi.net",
+  "main": "index.js",
+  "authors": [
+    "HuyNguyenHai <nguyenhaihuyyy@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/HuyNguyenHai/phimmoi.net",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.4.1",
+    "bootstrap": "^4.3.1"
+  }
+}

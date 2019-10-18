@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phim mới</title>
+    <!-- fav-icon -->
+    <link rel="icon" href="../public/images/logos/fav-icon.png">
+    <!-- bootstrap stylesheet -->
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- customize styles -->
+    <link rel="stylesheet" href="../public/css/styles.css">
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=430532267552611&autoLogAppEvents=1"></script>
+    <!-- Header start-->
+    <header>
+        <div class="custom-container">
+            <div class="row">
+                <div class="col-md-4 header-logo">
+                    <a href="index.html">
+                        <img src="../public/images/logos/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-8 search">
+                    <div class="search-widget">
+                        <form action="#" method="POST">
+                            <input type="text" placeholder="Tìm: tên phim, đạo diễn, diễn viên">
+                            <button type="submit">SEARCH</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Navigation start -->
+    <div class="nav-section">
+        <div class="custom-container nav">
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link">PHIM MỚI</a></li>
+                <li class="nav-item"><a href="#" class="nav-link" data-toggle="cate-list">THỂ LOẠI</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">QUỐC GIA</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">PHIM LẺ</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">PHIM BỘ</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">PHIM THUYẾT MINH</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">PHIM CHIẾU RẠP</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">TRAILER</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">TOP IMDB 2018</a></li>
+            </ul>
+            <ul class="dropdown-list" id="cate-list">
+                    <li class="dropdown-item">
+                        phim hành động
+                    </li>
+                    <li class="dropdown-item">
+                        phim hành động
+                    </li>
+                    <li class="dropdown-item">
+                        phim hành động
+                    </li>
+                    <li class="dropdown-item">
+                        phim hành động
+                    </li>
+                    <li class="dropdown-item">
+                        phim hành động
+                    </li>
+                    <li class="dropdown-item">
+                        phim hành động
+                    </li>
+                    <li class="dropdown-item">
+                        phim hành động
+                    </li>
+                </ul>
+        </div>
+    </div>
+    <!-- Navigation end -->
+
+    <!-- Main content start-->
+    <div class="main">
+        <div class="custom-container">
+            <div class="row">
+                <div class="breadcrumb-nav">
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">TRANG CHỦ</a></li>
+                        <li class="breadcrumb-item"><a href="#">PHIM LẺ</a></li>
+                        <li class="breadcrumb-item"><a href="#">PHIM HÀNH ĐỘNG</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">CHÚ HỀ MA QUÁI 2</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <!-- left col end -->
+                <div class="col-lg-8">
+                    <div class="section movie-details">
+                        <div class="details-sm">
+                            <div class="thumb-sm">
+                                <div class="btns">
+                                    <a href="watching-page.html" class="btn btn-success">Xem Trailer</a>
+                                </div>
+                            </div>
+                            <div class="movie-info-sm">
+                                <div class="title-sm">
+                                    Nội dung phim
+                                </div>
+                                <p class="summary-content">
+                                    Khi một tài xế Uber hiền lành có tên Stu (Kumail Nanjiani) đón một hành khách (Dave
+                                    Bautista), thực chất là một cảnh sát đang truy đuổi theo dấu vết của một tên sát
+                                    nhân tàn bạo, anh ta lao vào một thử thách mà phải luôn cố giữ bình tĩnh, giữ mạng
+                                    sống để nhận đánh giá 5 sao.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="section">
+                            <video class="watching-window" controls>
+                                <source src="mov_bbb.mp4" type="video/mp4">
+                                <source src="mov_bbb.ogg" type="video/ogg">
+                                Your browser does not support HTML5 video.
+                            </video>
+                        </div>
+                        <div class="section comments">
+                            <div class="title-sm">
+                                Bình luận về phim
+                            </div>
+                            <div class="section-sm">
+                                <div class="fb-comments"
+                                    data-href="https://developers.facebook.com/docs/plugins/comments#configurator"
+                                    data-width="" data-numposts="5"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="movie-cate">
+                        <div class="movie-cate-header">
+                            <div class="section-title">CÓ THỂ BẠN MUỐN XEM</div>
+                            <a class="more-btn" href="">Xem tất cả ></a>
+                        </div>
+                        <hr>
+                        <div class="movie-cate-list">
+                            <div class="row">
+                                <ul>
+                                    <li><a href="">
+                                            <div class="movie-thumb-md" title="Chú hề ma quái 2">
+                                                <div class="movie-info">
+                                                    <div class="movie-title-vn">Chú hề ma quái 2</div>
+                                                    <div class="movie-title-en">It chapter two</div>
+                                                </div>
+                                                <div class="time">137 phút</div>
+                                            </div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div class="movie-thumb-md" title="Chú hề ma quái 2">
+                                                <div class="movie-info">
+                                                    <div class="movie-title-vn">Chú hề ma quái 2</div>
+                                                    <div class="movie-title-en">It chapter two</div>
+                                                </div>
+                                                <div class="time">137 phút</div>
+                                            </div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div class="movie-thumb-md" title="Chú hề ma quái 2">
+                                                <div class="movie-info">
+                                                    <div class="movie-title-vn">Chú hề ma quái 2</div>
+                                                    <div class="movie-title-en">It chapter two</div>
+                                                </div>
+                                                <div class="time">137 phút</div>
+                                            </div>
+                                        </a></li>
+                                    <li>
+                                        <a href="">
+                                            <div class="movie-thumb-md" title="Chú hề ma quái 2">
+                                                <div class="movie-info">
+                                                    <div class="movie-title-vn">Chú hề ma quái 2</div>
+                                                    <div class="movie-title-en">It chapter two</div>
+                                                </div>
+                                                <div class="time">137 phút</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li><a href="">
+                                            <div class="movie-thumb-md" title="Chú hề ma quái 2">
+                                                <div class="movie-info">
+                                                    <div class="movie-title-vn">Chú hề ma quái 2</div>
+                                                    <div class="movie-title-en">It chapter two</div>
+                                                </div>
+                                                <div class="time">137 phút</div>
+                                            </div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div class="movie-thumb-md" title="Chú hề ma quái 2">
+                                                <div class="movie-info">
+                                                    <div class="movie-title-vn">Chú hề ma quái 2</div>
+                                                    <div class="movie-title-en">It chapter two</div>
+                                                </div>
+                                                <div class="time">137 phút</div>
+                                            </div>
+                                        </a></li>
+                                    <li><a href="">
+                                            <div class="movie-thumb-md" title="Chú hề ma quái 2">
+                                                <div class="movie-info">
+                                                    <div class="movie-title-vn">Chú hề ma quái 2</div>
+                                                    <div class="movie-title-en">It chapter two</div>
+                                                </div>
+                                                <div class="time">137 phút</div>
+                                            </div>
+                                        </a></li>
+                                    <li>
+                                        <a href="">
+                                            <div class="movie-thumb-md" title="Chú hề ma quái 2">
+                                                <div class="movie-info">
+                                                    <div class="movie-title-vn">Chú hề ma quái 2</div>
+                                                    <div class="movie-title-en">It chapter two</div>
+                                                </div>
+                                                <div class="time">137 phút</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- right col start -->
+                <div class="col-sm-4">
+                    <div class="right-box">
+                        <div class="right-box-title">
+                            <div class="title">TRAILER PHIM MỚI</div>
+                        </div>
+                        <div class="right-box-content">
+                            <div class="content-wrapper">
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-box">
+                        <div class="right-box-title">
+                            <div class="title">PHIM LẺ HOT TRONG TUẦN</div>
+                        </div>
+                        <div class="right-box-content">
+                            <div class="content-wrapper">
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="movie-thumb-sm">
+                                        <div class="figure"></div>
+                                        <div class="movie-info">
+                                            <p class="movie-title-vn">Chú hề ma quái 2</p>
+                                            <p class="movie-title-en">It chapter two</p>
+                                            <p class="views">Lượt xem: 10</p>
+                                            <div class="star-rating">
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-box tag-box-container">
+                        <div class="right-box-title">
+                            <div class="title">TỪ KHÓA NỔI BẬT</div>
+                        </div>
+                        <div class="right-box-content">
+                            <ul class="tag-box">
+                                <li class="tag-item">
+                                    <a href="">tội phạm</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">hình sự</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">phim việt nam</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">châu tinh trì</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">tội phạm</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">tội phạm</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">hình sự</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">phim việt nam</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">châu tinh trì</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">tội phạm</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">tội phạm</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">hình sự</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">phim việt nam</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">châu tinh trì</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">tội phạm</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">tội phạm</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">hình sự</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">phim việt nam</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">châu tinh trì</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">tội phạm</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">tội phạm</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">hình sự</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">phim việt nam</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">châu tinh trì</a>
+                                </li>
+                                <li class="tag-item">
+                                    <a href="">tội phạm</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- right col end -->
+            </div>
+        </div>
+        <!-- Main content end -->
+
+        <!-- Footer start -->
+        <footer>
+            <div class="custom-container">
+                <div class="row">
+                    <div class="col-sm-2"><img src="../public/images/logos/logo.png" alt="" class="logo"></div>
+                    <div class="col-sm-6 cate-list-group">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="cate-title">PHIM MỚI</div>
+                                <div class="cate-list">
+                                    <ul>
+                                        <li class="cate-item"><a href="">Phim lẻ mới</a></li>
+                                        <li class="cate-item"><a href="">Phim bộ mới</a></li>
+                                        <li class="cate-item"><a href="">Phim chiếu rạp</a></li>
+                                        <li class="cate-item"><a href="">Phim kinh điển</a></li>
+                                        <li class="cate-item"><a href="">Phim sắp chiếu</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="cate-title">PHIM MỚI</div>
+                                <div class="cate-list">
+                                    <ul>
+                                        <li class="cate-item"><a href="">Phim lẻ mới</a></li>
+                                        <li class="cate-item"><a href="">Phim bộ mới</a></li>
+                                        <li class="cate-item"><a href="">Phim chiếu rạp</a></li>
+                                        <li class="cate-item"><a href="">Phim kinh điển</a></li>
+                                        <li class="cate-item"><a href="">Phim sắp chiếu</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="cate-title">PHIM MỚI</div>
+                                <div class="cate-list">
+                                    <ul>
+                                        <li class="cate-item"><a href="">Phim lẻ mới</a></li>
+                                        <li class="cate-item"><a href="">Phim bộ mới</a></li>
+                                        <li class="cate-item"><a href="">Phim chiếu rạp</a></li>
+                                        <li class="cate-item"><a href="">Phim kinh điển</a></li>
+                                        <li class="cate-item"><a href="">Phim sắp chiếu</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 contacts">
+                        <p>Liên hệ quảng cáo</p>
+                        <p>Email: phimmoi.net@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer end -->
+
+        <!-- Libraries -->
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- My scripts -->
+        <script src="../public/js/mainConfig.js"></script>
+</body>
+
+</html>
