@@ -45,10 +45,52 @@ function autoCarousel() {
     $('.top-movie-list').find('.next-btn').click();
 }
 
+function popUpModals() {
+    $('.movie-link').parent().on('click', function(e) {
+        e.preventDefault();
+        $('.pop-up-window').show();
+        $('.movie-details').hide();
+        $('.movie-summary').show();
+    });
+
+    $('.watch-btn').on('click', function(e) {
+        e.preventDefault();
+        $('.movie-details').hide();
+        $('.movie-watch').show();
+    });
+
+    $('.trailer-btn').on('click', function(e) {
+        e.preventDefault();
+        $('.movie-details').hide();
+        $('.movie-trailer').show();
+    });
+
+    $('.summary-btn').on('click', function(e) {
+        e.preventDefault();
+        $('.movie-details').hide();
+        $('.movie-summary').show();
+    });
+
+    $('.download-btn').on('click', function(e) {
+        e.preventDefault();
+        $('.movie-details').hide();
+        $('.movie-download').show();
+    });
+}
+
+function popDownModals() {
+    $('.close-modal-btn').on('click', function(e) {
+        e.preventDefault();
+        $('.pop-up-window').hide();
+    });
+}
+
 $(document).ready(function () {
     dropdown();
     carousel();
     setInterval(function() {
         autoCarousel();
-    }, 5000);
+    }, 7000);
+    popUpModals();
+    popDownModals();
 });
