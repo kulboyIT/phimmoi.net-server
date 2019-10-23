@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phim mới</title>
+    <!-- fav-icon -->
+    <link rel="icon" href="/images/logos/fav-icon.png">
+    <!-- bootstrap stylesheet -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- customize styles -->
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body class="nice-scroll">
+    <!-- Pop up Modal start -->
+    <%- include('popupModal/popupModal.ejs') %>
+    <!-- Pop up Modal end -->
+
+    <!-- Header start-->
+    <%- include('header/header.ejs') %>
+    <!-- Header end -->
+
+    <!-- Navigation start -->
+    <%- include('navigation/navbar.ejs') %>
+    <!-- Navigation end -->
+
+    <!-- Main content start-->
+    <%- include('sections/sections.ejs') %>
+    <!-- Main content end -->
+
+    <!-- Footer start -->
+    <%- include('footer/footer.ejs') %>
+    <!-- Footer end -->
+
+    <!-- Libraries -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <!-- My scripts -->
+    <script src="/js/mainConfig.js"></script>
+</body>
+
+</html>

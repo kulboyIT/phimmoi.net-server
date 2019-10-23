@@ -1,0 +1,28 @@
+<div class="nav-section">
+    <div class="custom-container nav">
+        <ul class="nav">
+            <li class="nav-item"><a href="#" class="nav-link">PHIM MỚI</a></li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">THỂ LOẠI</a>
+                <ul class="dropdown-list">
+                    <% categories.forEach(function(category) { %>
+                        <li class="dropdown-item"><a href="#"><%= category.title %></a></li>    
+                    <% }) %>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">QUỐC GIA</a>
+                <ul class="dropdown-list">
+                    <% countries.forEach(function(country) { %>
+                        <li class="dropdown-item"><a href="#"><%= country.country %></a></li>
+                    <% }) %>
+                </ul>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link">PHIM LẺ</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">PHIM BỘ</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">PHIM THUYẾT MINH</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">PHIM CHIẾU RẠP</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">TRAILER</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">TOP IMDB 2018</a></li>
+        </ul>
+    </div>
+</div>

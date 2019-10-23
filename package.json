@@ -2,22 +2,33 @@
   "name": "phimmoi.net",
   "version": "1.0.0",
   "description": "Clone phimmoi.net",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node src/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HuyNguyenHai/phimmoi.net.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "HuyNguyen",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/HuyNguyenHai/phimmoi.net/issues"
   },
   "homepage": "https://github.com/HuyNguyenHai/phimmoi.net",
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "bower": "^1.8.8"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.1",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "express-ejs-extend": "0.0.1",
+    "mongoose": "^5.7.6"
   }
 }

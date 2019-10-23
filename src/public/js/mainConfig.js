@@ -19,7 +19,7 @@ function carousel() {
         else {
             counter--;
             $('.top-movie-wrapper').animate({
-                left: `+=${step}`
+                left: "+="+step
             }, 800);
         }
     })
@@ -35,7 +35,7 @@ function carousel() {
         else {
             counter++;
             $('.top-movie-wrapper').animate({
-                left: `-=${step}`
+                left: "-="+step
             }, 800);
         } 
     })
@@ -75,6 +75,12 @@ function popUpModals() {
         e.preventDefault();
         $('.movie-details').hide();
         $('.movie-download').show();
+    });
+
+    $('.pop-up-bg').on('click', function(e) {
+        e.preventDefault();
+        $('.movie-details').hide();
+        $('.pop-up-window').hide();
     });
 }
 
