@@ -1,10 +1,13 @@
 import mongoose from "mongoose";
+
 let Schema = mongoose.Schema;
 
 let MovieSchema = new Schema({
     status: {type: String, trim: true, default: "Chưa xác định."},
     title_vn: {type: String, trim: true},
     title_en: {type: String, trim: true},
+    thumbnail: {type: String, trim: true},
+    type: {type: String, trim: true},
     time: {type: Number, default: 0},
     imdb: {type: Number, default: 0},
     directors: {type: [String], default: []},
@@ -25,6 +28,38 @@ let MovieSchema = new Schema({
 MovieSchema.statics = {
     createNew(item) {
         return this.create(item);
+    },
+
+    /**
+     * Get movies with type and limit number
+     * @param {Number} limitNumb 
+     * @param {String} type
+     */
+    getMoviesByType(type, limit) {
+        return this.find({
+            type: type
+        }).
+        limit(limit).
+        sort({create_at: -1}).
+        exec();
+    },
+
+    /**
+     * Get movies by category with limit number
+     * @param {String} category 
+     * @param {Number} limitNumb 
+     */
+    getMoviesByCategoryId(categoryId, limit) {
+        return this.find({
+            categories: categoryId
+        }).
+        limit(limit).
+        sort({create_at: -1}).
+        exec();
+    },
+
+    getMovieById(movieId) {
+        return this.findById(movieId).exec();
     }
 }
 

@@ -6,6 +6,8 @@
 html, body {
     background-color: #5b5b5b;
     height: 100%; 
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 /* thin scrollbar */
@@ -282,13 +284,20 @@ footer .cate-item a{
 }
 
 .movie-thumb-big {
-    background-image: url('http://image.phimmoi.net/film/8359/poster.thumb.jpg');
     background-size: 100% 100%;
     width: 300px;
     height: 100%;
     margin: 0 5px;
     display: inline-block;
     position: relative;
+}
+
+.thumb-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
 }
 
 .movie-thumb-big .movie-info {
@@ -312,11 +321,13 @@ a:hover .movie-thumb-big {
 }
 
 .movie-thumb-big .time {
+    position: absolute;
     padding: 5px 10px;
     background-color: #bf0000;
     width: 90px;
     font-weight: bold;
     margin: 5px;
+    z-index: 100;
 }
 
 .movie-update {
@@ -356,16 +367,15 @@ a:hover .movie-thumb-big {
 
 .movie-thumb-sm .time {
     height: 80%;
-    width: calc(100% - );
+    width: 15%;
     float: right;
     margin: 0 3px;
+    text-align: right;
+    z-index: 100;
 }
 
 .movie-thumb-sm .figure {
     border: 1px solid #fff;
-    background-image: url('http://image.phimmoi.net/film/8359/poster.thumb.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
     height: 90%;
     width: 70px;
     float: left;
@@ -429,9 +439,6 @@ a:hover .movie-thumb-big {
     height: 260px;
     width: 189px;
     margin: 5px 3px;
-    background-image: url('http://image.phimmoi.net/film/8359/poster.thumb.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
 }
 
 .movie-cate .movie-cate-list ul li .movie-thumb-md {
@@ -441,11 +448,13 @@ a:hover .movie-thumb-big {
 }
 
 .movie-thumb-md .time {
+    position: absolute;
     padding: 5px 10px;
     background-color: #bf0000;
     width: 90px;
     font-weight: bold;
     margin: 5px;
+    z-index: 100;
 }
 
 .movie-thumb-md .movie-info {
@@ -612,9 +621,6 @@ a:hover .movie-thumb-md .movie-info .movie-title-vn {
     padding: 0;
     height: 98%;
     width: 47%;
-    background-image: url('http://image.phimmoi.net/film/8359/poster.thumb.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
     margin: 5px;
     float: left;
 }
@@ -739,6 +745,10 @@ figure img{
     padding-bottom: 40px;
 }
 
+.watching-window:focus {
+    outline: none;
+}
+
 .details-sm {
     width: 100%;
     height: 260px;
@@ -754,6 +764,7 @@ figure img{
     height: 100%;
     margin: 5px;
     padding: 5px;
+    width: 74%;
 }
 
 .details-sm .movie-info-sm .btns{
@@ -784,9 +795,6 @@ figure img{
     padding: 0;
     height: 98%;
     width: 25%;
-    background-image: url('http://image.phimmoi.net/film/8359/poster.thumb.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
     margin: 5px;
     float: left;
 }
@@ -965,8 +973,4 @@ figure img{
     left: 0;
     top: 0;
     z-index: 1500;
-}
-
-.pop-up-content * {
-    z-index: inherit;
 }

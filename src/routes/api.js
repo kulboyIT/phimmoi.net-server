@@ -1,5 +1,5 @@
 import express from "express";
-import {home} from "../controllers";
+import {home, movie} from "../controllers";
 
 let router = express.Router();
 
@@ -10,6 +10,8 @@ let router = express.Router();
  */
 let initRoutes = app => {
     router.get("/", home.getHomePage);
+
+    router.get("/movie/info/:movieId", movie.getMovieInfo);
 
     return app.use('/', router);
 }

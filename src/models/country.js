@@ -14,6 +14,13 @@ CountrySchema.statics = {
 
     getAll() {
         return this.find({},{_id: 0, country: 1}).exec();
+    },
+
+    getTitleById(countryId) {
+        return this.findById({
+            _id: countryId
+        }, {country: 1}).
+        exec();
     }
 }
 

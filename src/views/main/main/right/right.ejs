@@ -1,0 +1,178 @@
+<div class="right-box">
+    <div class="right-box-title">
+        <div class="title">TRAILER PHIM MỚI</div>
+    </div>
+    <div class="right-box-content nice-scroll">
+        <div class="content-wrapper">
+            <% movies.forEach(function(movie) { %>
+            <a href="#" data-target="<%= movie._id %>">
+                <div class="movie-link movie-thumb-sm">
+                    <img src="<%= movie.thumbnail %>" alt="<%= movie.title_vn %>" class="figure">
+                    <div class="movie-info">
+                        <p class="movie-title-vn"><%= movie.title_vn %></p>
+                        <p class="movie-title-en"><%= movie.title_en %></p>
+                        <p class="views">Lượt xem: <%= movie.trailer_views %> lượt</p>
+                        <div class="star-rating">
+                            <%  let starRating = Math.floor(movie.star_rating);
+                                for(let i = 0; i < starRating; i++) { %>
+                            <span class="fa fa-star checked"></span>
+                            <% } %>
+                            <%  for(let i = starRating; i < 5; i++) { %>
+                            <span class="fa fa-star"></span>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <% }); %>
+        </div>
+    </div>
+</div>
+
+<div class="right-box">
+    <div class="right-box-title">
+        <div class="title">PHIM LẺ HOT TRONG TUẦN</div>
+    </div>
+    <div class="right-box-content nice-scroll">
+        <div class="content-wrapper">
+            <% movies.forEach(function(movie) { %>
+            <a href="#" data-target="<%= movie._id %>">
+                <div class="movie-link movie-thumb-sm">
+                    <img src="<%= movie.thumbnail %>" alt="<%= movie.title_vn %>" class="figure">
+                    <div class="movie-info">
+                        <p class="movie-title-vn"><%= movie.title_vn %></p>
+                        <p class="movie-title-en"><%= movie.title_en %></p>
+                        <p class="views">Lượt xem: <%= movie.watch_views %> lượt</p>
+                        <div class="star-rating">
+                            <%  let starRating = Math.floor(movie.star_rating);
+                                    for(let i = 0; i < starRating; i++) { %>
+                            <span class="fa fa-star checked"></span>
+                            <% } %>
+                            <%  for(let i = starRating; i < 5; i++) { %>
+                            <span class="fa fa-star"></span>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <% }); %>
+        </div>
+    </div>
+</div>
+
+<div class="right-box">
+    <div class="right-box-title">
+        <div class="title">PHIM BỘ HOT TRONG TUẦN</div>
+    </div>
+    <div class="right-box-content nice-scroll">
+        <div class="content-wrapper">
+            <% series.forEach(function(movie) { %>
+            <a href="#" data-target="<%= movie._id %>"> 
+                <div class="movie-link movie-thumb-sm">
+                    <img src="<%= movie.thumbnail %>" alt="<%= movie.title_vn %>" class="figure">
+                    <div class="movie-info">
+                        <p class="movie-title-vn"><%= movie.title_vn %></p>
+                        <p class="movie-title-en"><%= movie.title_en %></p>
+                        <p class="views">Lượt xem: <%= movie.watch_views %> lượt</p>
+                        <div class="star-rating">
+                            <%  let starRating = Math.floor(movie.star_rating);
+                                        for(let i = 0; i < starRating; i++) { %>
+                            <span class="fa fa-star checked"></span>
+                            <% } %>
+                            <%  for(let i = starRating; i < 5; i++) { %>
+                            <span class="fa fa-star"></span>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <% }); %>
+        </div>
+    </div>
+</div>
+
+<!-- NOT DONE -->
+<div class="right-box tag-box-container">
+    <div class="right-box-title">
+        <div class="title">TỪ KHÓA NỔI BẬT</div>
+    </div>
+    <div class="right-box-content">
+        <ul class="tag-box">
+            <li class="tag-item">
+                <a href="#">tội phạm</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">hình sự</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">phim việt nam</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">châu tinh trì</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">tội phạm</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">tội phạm</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">hình sự</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">phim việt nam</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">châu tinh trì</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">tội phạm</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">tội phạm</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">hình sự</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">phim việt nam</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">châu tinh trì</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">tội phạm</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">tội phạm</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">hình sự</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">phim việt nam</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">châu tinh trì</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">tội phạm</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">tội phạm</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">hình sự</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">phim việt nam</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">châu tinh trì</a>
+            </li>
+            <li class="tag-item">
+                <a href="#">tội phạm</a>
+            </li>
+        </ul>
+    </div>
+</div>
