@@ -17,7 +17,7 @@ function showMovieInfos(movieInfo, movieCategories, movieCountries) {
     let countriesElem = "";
 
     movieCountries.forEach(function(country) {
-        countriesElem +=  `<a href="#">${country.country}</a>,`;
+        countriesElem +=  `<a href="#">${country.title}</a>,`;
     });
 
     let categoriesElem = "";
@@ -33,7 +33,7 @@ function showMovieInfos(movieInfo, movieCategories, movieCountries) {
     </p>
     <p class="movie-dl-item">
         <span class="dl-title"> Thời lượng: </span>
-        <span class="dl-value">${movieInfo.time}</span>
+        <span class="dl-value">${movieInfo.time} phút</span>
     </p>
     <p class="movie-dl-item">
         <span class="dl-title"> IMDb: </span>
@@ -69,23 +69,36 @@ function requestForMovieInfos(movieId) {
             let movieCategories = data.movieCategories;
             let movieCountries = data.movieCountries;
 
+            //movie-thumbnail
             let movieThumbnailBig = $('.pop-up-content').find('.thumb .thumb-bg');
             let movieThumbnailSm = $('.pop-up-content').find('.thumb-sm .thumb-bg');
             movieThumbnailBig.attr('src', movieInfo.thumbnail);
             movieThumbnailSm.attr('src', movieInfo.thumbnail);
 
+            //movie-title
             let movieTitle = $('.pop-up-content').find('.movie-info');
             movieTitle.find('.movie-title-vn').text(movieInfo.title_vn);
             movieTitle.find('.movie-title-en').text(movieInfo.title_en);
 
+            //movie-infomations
             showMovieInfos(movieInfo, movieCategories, movieCountries);
 
+            //star-rating
+            let starRating = $('.pop-up-content').find('.movie-info').find('.star-rating');
+            let movieStarRating = Math.floor(movieInfo.star_rating);
+            starRating.empty();
+            for(let i = 0; i < movieStarRating; i++)
+                starRating.append('<span class="fa fa-star checked"></span>');
+            for(let i = movieStarRating; i < 5; i++)
+                starRating.append('<span class="fa fa-star"></span>');
+            
+            //movie-descriptions
             let movieDescriptions = $('.pop-up-content').find('.summary-content');
             movieDescriptions.html(movieInfo.descriptions);
 
+            //movie-related-keywords
             let movieTags =  $('.pop-up-content').find('.tag-box');
             movieTags.empty();
-
             let keywords = movieInfo.keywords;
             keywords.forEach(function(keyword) {
                 movieTags.append(`<li class="tag-item">

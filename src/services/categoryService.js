@@ -11,6 +11,18 @@ let getAllCategories = async () => {
     });
 }
 
+let getTitleById = async (categoryId) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let categoryTitle = await Category.getTitleById(categoryId);
+            resolve(categoryTitle);
+        } catch (error) {
+            reject(error);
+        }
+    })
+}
+
 module.exports = {
-    getAllCategories: getAllCategories
+    getAllCategories: getAllCategories,
+    getTitleById: getTitleById
 }

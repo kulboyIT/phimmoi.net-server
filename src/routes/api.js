@@ -13,6 +13,16 @@ let initRoutes = app => {
 
     router.get("/movie/info/:movieId", movie.getMovieInfo);
 
+    router.get("/category/:categoryId", movie.getMoviesByCategoryId);
+
+    router.get("/country/:countryId", movie.getMoviesByCountryId);
+
+    router.get("/phim-le", movie.getMovies);
+
+    router.get("/phim-bo", movie.getSeries);
+
+    router.get("/search", movie.getMoviesByKeyword);
+
     return app.use('/', router);
 }
 

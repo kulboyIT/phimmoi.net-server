@@ -11,6 +11,18 @@ let getAllCountries = async () => {
     });
 }
 
+let getTitleById = async (coutryId) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let countryName = await Country.getTitleById(coutryId);
+            resolve(countryName);
+        } catch (error) {
+            reject(error);
+        }
+    })
+}
+
 module.exports = {
-    getAllCountries: getAllCountries
+    getAllCountries: getAllCountries,
+    getTitleById: getTitleById
 }

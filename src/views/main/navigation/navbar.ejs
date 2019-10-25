@@ -4,21 +4,21 @@
             <li class="nav-item"><a href="#" class="nav-link">PHIM MỚI</a></li>
             <li class="nav-item">
                 <a href="#" class="nav-link">THỂ LOẠI</a>
-                <ul class="dropdown-list">
+                <ul class="dropdown-list categories">
                     <% categories.forEach(function(category) { %>
-                        <li class="dropdown-item"><a href="#"><%= category.title %></a></li>    
+                        <li class="dropdown-item"><a href="/category/<%=category._id%>"><%= category.title %></a></li>    
                     <% }) %>
                 </ul>
             </li>
             <li class="nav-item"><a href="#" class="nav-link">QUỐC GIA</a>
-                <ul class="dropdown-list">
+                <ul class="dropdown-list countries">
                     <% countries.forEach(function(country) { %>
-                        <li class="dropdown-item"><a href="#"><%= country.country %></a></li>
+                        <li class="dropdown-item"><a href="/country/<%=country._id%>"><%= country.title %></a></li>
                     <% }) %>
                 </ul>
             </li>
-            <li class="nav-item"><a href="#" class="nav-link">PHIM LẺ</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">PHIM BỘ</a></li>
+            <li class="nav-item"><a href="/phim-le" class="nav-link">PHIM LẺ</a></li>
+            <li class="nav-item"><a href="/phim-bo" class="nav-link">PHIM BỘ</a></li>
             <li class="nav-item"><a href="#" class="nav-link">PHIM THUYẾT MINH</a></li>
             <li class="nav-item"><a href="#" class="nav-link">PHIM CHIẾU RẠP</a></li>
             <li class="nav-item"><a href="#" class="nav-link">TRAILER</a></li>

@@ -24,11 +24,33 @@ let getMoviesByType = (type, limitNumb = LIMIT_NUMBER) => {
  * @param {String} categoryTitle 
  * @param {Number} limitNumb 
  */
-let getMoviesByCategory = (categoryTitle, limitNumb = LIMIT_NUMBER) => {
+let getMoviesByCategoryTitle = (categoryTitle, limitNumb = LIMIT_NUMBER) => {
     return new Promise(async (resolve, reject) => {
         try {
             let categoryId = await Category.getIdByTitle(categoryTitle);
             let movies = await Movie.getMoviesByCategoryId(categoryId._id, limitNumb);
+            resolve(movies);
+        } catch (error) {
+            reject(error);
+        }
+    })
+}
+
+let getMoviesByCategoryId = (categoryId, limitNumb = LIMIT_NUMBER) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let movies = await Movie.getMoviesByCategoryId(categoryId, limitNumb);
+            resolve(movies);
+        } catch (error) {
+            reject(error);
+        }
+    })
+}
+
+let getMoviesByCountryId = (countryId, limitNumb = LIMIT_NUMBER) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let movies = await Movie.getMoviesByCountryId(countryId, limitNumb);
             resolve(movies);
         } catch (error) {
             reject(error);
@@ -62,8 +84,22 @@ let getMovieById = (movieId) => {
     })
 }
 
+let getMoviesByKeyword = (keyword, limitNumb = LIMIT_NUMBER) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let movie = await Movie.getMoviesByKeyword(keyword,limitNumb);
+            resolve(movie);
+        } catch (error) {
+            reject(error);
+        }
+    });
+}
+
 module.exports = {
     getMoviesByType: getMoviesByType,
-    getMoviesByCategory: getMoviesByCategory,
-    getMovieById: getMovieById
+    getMoviesByCategoryTitle: getMoviesByCategoryTitle,
+    getMovieById: getMovieById,
+    getMoviesByCategoryId: getMoviesByCategoryId,
+    getMoviesByCountryId: getMoviesByCountryId,
+    getMoviesByKeyword: getMoviesByKeyword
 }

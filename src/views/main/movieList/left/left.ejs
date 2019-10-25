@@ -1,0 +1,26 @@
+<div class="movie-cate">
+    <div class="movie-cate-header">
+        <div class="section-title"><%= listTitle %></div>
+    </div>
+    <hr>
+    <div class="movie-cate-list">
+        <div class="row">
+            <ul>
+                <% moviesFiltered.forEach(function(movie) { %>
+                <li>
+                    <a href="#" data-target="<%= movie._id %>">
+                        <div class="movie-link movie-thumb-md" title="Chú hề ma quái 2">
+                            <img class="thumb-bg" src="<%= movie.thumbnail %>" alt="<%= movie.title_vn %>">
+                            <div class="movie-info">
+                                <div class="movie-title-vn"><%= movie.title_vn %></div>
+                                <div class="movie-title-en"><%= movie.title_en %></div>
+                            </div>
+                            <div class="time"><%= movie.time %> phút</div>
+                        </div>
+                    </a>
+                </li>
+                <% });%>
+            </ul>
+        </div>
+    </div>
+</div>

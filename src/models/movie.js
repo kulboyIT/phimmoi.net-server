@@ -38,6 +38,13 @@ MovieSchema.statics = {
     getMoviesByType(type, limit) {
         return this.find({
             type: type
+        }, {
+            _id: 1,
+            thumbnail: 1,
+            title_vn:1,
+            title_en: 1,
+            time: 1,
+            star_rating: 1
         }).
         limit(limit).
         sort({create_at: -1}).
@@ -52,6 +59,55 @@ MovieSchema.statics = {
     getMoviesByCategoryId(categoryId, limit) {
         return this.find({
             categories: categoryId
+        }, {
+            _id: 1,
+            thumbnail: 1,
+            title_vn:1,
+            title_en: 1,
+            time: 1,
+            star_rating: 1
+        }).
+        limit(limit).
+        sort({create_at: -1}).
+        exec();
+    },
+
+    /**
+     * Get movies by category with limit number
+     * @param {String} category 
+     * @param {Number} limitNumb 
+     */
+    getMoviesByCountryId(countryId, limit) {
+        return this.find({
+            countries: countryId
+        }, {
+            _id: 1,
+            thumbnail: 1,
+            title_vn:1,
+            title_en: 1,
+            time: 1,
+            star_rating: 1
+        }).
+        limit(limit).
+        sort({create_at: -1}).
+        exec();
+    },
+
+    /**
+     * Get movies by keyword with limit number
+     * @param {String} category 
+     * @param {Number} limitNumb 
+     */
+    getMoviesByKeyword(keyword, limit) {
+        return this.find({
+            keywords: keyword
+        }, {
+            _id: 1,
+            thumbnail: 1,
+            title_vn:1,
+            title_en: 1,
+            time: 1,
+            star_rating: 1
         }).
         limit(limit).
         sort({create_at: -1}).

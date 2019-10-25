@@ -1,7 +1,9 @@
 import express from "express";
+import bodyParser from "body-parser";
 import initRoutes from "./routes/api";
 import viewEngineConfig from "./config/viewEngine";
 import connectDb from "./config/connectDb";
+
 let app = express();
 
 let host = "localhost";
@@ -9,6 +11,9 @@ let port = 3000;
 
 //set root path
 app.use(express.static('src/public'));
+
+//use body parser
+app.use(bodyParser.urlencoded({extended: true}));
 
 //set viewengine
 viewEngineConfig(app);

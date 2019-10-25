@@ -28,7 +28,7 @@ html, body {
     border: none;
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 600px) {
     .custom-container {
         width: 100% !important;
         margin: auto;
@@ -48,10 +48,6 @@ html, body {
         margin: auto;
         margin-top: 50px;
     }
-
-    /* .col-sm-4 {
-        display: none;
-    } */
 
     .dropdown-list {
         position: absolute;
@@ -90,9 +86,20 @@ html, body {
         height: auto;
         margin-top: 10px;
     }
+
+    .movie-cate .movie-cate-list ul li {
+        display: inline-block;
+        width: 45%;
+        height: 260px;
+        margin: 5px 3px;
+    }
+
+    .col-sm-4 {
+        width: 100%;
+    }
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 600px) {
     .custom-container {
         max-width: 1300px !important;
         margin: auto;
@@ -150,6 +157,13 @@ html, body {
         width: 100%;
         height: 665px;
         margin-top: 10px;
+    }
+
+    .movie-cate .movie-cate-list ul li {
+        display: inline-block;
+        width: 23%;
+        height: 260px;
+        margin: 5px 3px;
     }
 }
 
@@ -303,7 +317,7 @@ footer .cate-item a{
 .movie-thumb-big .movie-info {
     position: absolute;
     bottom: 0;
-    height: 60px;
+    height: auto;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 20px;
@@ -431,15 +445,10 @@ a:hover .movie-thumb-big {
     padding:5px;
     width: 100%;
     height: auto;
-    text-align: center;
+    text-align: left;
 }
 
-.movie-cate .movie-cate-list ul li {
-    display: inline-block;
-    height: 260px;
-    width: 189px;
-    margin: 5px 3px;
-}
+
 
 .movie-cate .movie-cate-list ul li .movie-thumb-md {
     height: 100%;
@@ -460,7 +469,7 @@ a:hover .movie-thumb-big {
 .movie-thumb-md .movie-info {
     position: absolute;
     bottom: 0;
-    height: 60px;
+    height: auto;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     padding: 10px 20px;
@@ -827,6 +836,7 @@ figure img{
 
 .dropdown-item a{
     font-size: 1.4rem;
+    text-transform: capitalize;
 }
 
 .dropdown-item:hover{
@@ -973,4 +983,12 @@ figure img{
     left: 0;
     top: 0;
     z-index: 1500;
+}
+
+.section-title {
+    text-transform: uppercase;
+}
+
+.movie-link {
+    background-color: #272727;
 }

@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 let Schema = mongoose.Schema;
 
 let CountrySchema = new Schema({
-    country: {type: String, trim: true},
+    title: {type: String, trim: true},
     movie_number: {type: Number, default: 0},
     create_at: {type: Number, default: Date.now}
 });
@@ -13,13 +13,19 @@ CountrySchema.statics = {
     },
 
     getAll() {
-        return this.find({},{_id: 0, country: 1}).exec();
+        return this.find({},{
+            _id: 1, 
+            title: 1
+        }).
+        exec();
     },
 
     getTitleById(countryId) {
         return this.findById({
             _id: countryId
-        }, {country: 1}).
+        }, {
+            title: 1
+        }).
         exec();
     }
 }

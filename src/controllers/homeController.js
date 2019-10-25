@@ -6,9 +6,9 @@ let getHomePage = async (req, res, next) => {
     let countries = await country.getAllCountries();
     let movies = await movie.getMoviesByType('movie');
     let series = await movie.getMoviesByType('series');
-    let actionMovies = await movie.getMoviesByCategory(categoryTitle.ACTION_VN);
-    let scifiMovies = await movie.getMoviesByCategory(categoryTitle.SCIFI_VN);
-    let scaryMovies =  await movie.getMoviesByCategory(categoryTitle.SCARY_VN);
+    let actionMovies = await movie.getMoviesByCategoryTitle(categoryTitle.ACTION_VN);
+    let scifiMovies = await movie.getMoviesByCategoryTitle(categoryTitle.SCIFI_VN);
+    let scaryMovies =  await movie.getMoviesByCategoryTitle(categoryTitle.SCARY_VN);
     let newestMovies = movies.concat(series);
  
     res.render('main/homePage', {

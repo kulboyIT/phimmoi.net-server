@@ -13,20 +13,28 @@ CategorySchema.statics = {
     },
 
     getAll() {
-        return this.find({}, {_id: 0, title: 1}).exec();
+        return this.find({}, {
+            _id: 1,
+            title: 1
+        }).
+        exec();
     },
 
     getIdByTitle(categoryTitle) {
         return this.findOne({
             title: categoryTitle
-        }, {_id: 1}).
+        }, {
+            _id: 1
+        }).
         exec();
     },
 
     getTitleById(categoryId) {
         return this.findById({
             _id: categoryId
-        }, {title: 1}).
+        }, {
+            title: 1
+        }).
         exec();
     }
 }
