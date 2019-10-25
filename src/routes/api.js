@@ -1,5 +1,5 @@
 import express from "express";
-import {home, movie} from "../controllers";
+import {home, movie, comment} from "../controllers";
 
 let router = express.Router();
 
@@ -12,6 +12,7 @@ let initRoutes = app => {
     router.get("/", home.getHomePage);
 
     router.get("/movie/info/:movieId", movie.getMovieInfo);
+    router.get("/movie/comments/:movieId", comment.getMovieComments)
 
     router.get("/category/:categoryId", movie.getMoviesByCategoryId);
 
@@ -22,6 +23,8 @@ let initRoutes = app => {
     router.get("/phim-bo", movie.getSeries);
 
     router.get("/search", movie.getMoviesByKeyword);
+
+    router.post("/comment/add-new", comment.addNewComment);
 
     return app.use('/', router);
 }

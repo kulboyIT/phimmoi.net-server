@@ -11,6 +11,15 @@ let CommentSchema = new Schema({
 CommentSchema.statics = {
     createNew(item) {
         return this.create(item);
+    },
+
+    getByMovieId(movieId, limit) {
+        return this.find({
+            movie_id: movieId
+        }).
+        sort({create_at: -1}).
+        limit(limit).
+        exec();
     }
 }
 

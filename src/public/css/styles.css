@@ -886,7 +886,7 @@ figure img{
 
 .pop-up-content .comments .comments-list .comment .comment-details {
     display: inline-block;
-    width: 70%;
+    width: 80%;
     color: #fff;
     margin-top: 10px;
     margin-left: 20%;
@@ -900,6 +900,65 @@ figure img{
 .pop-up-content .comments .comments-list .comment .comment-details .comment-content {
     font-size: 1.3rem;
 }
+
+/* comment form start */
+.pop-up-content .comments .comment-form .comment {
+    margin: 10px 0px;
+    padding: 10px 5px;
+    background-color: #15151561;
+    height: auto;
+    width: 100%;
+    position: relative;
+}
+
+.pop-up-content .comments .comment-form .comment .avatar {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin-bottom: 50px;
+    position: absolute;
+    margin: 10px;
+}
+
+.pop-up-content .comments .comment-form .comment .avatar img {
+    width: 100%;
+    height: auto;
+}
+
+.pop-up-content .comments .comment-form .comment .comment-details {
+    display: inline-block;
+    width: 80%;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 20%;
+}
+
+.pop-up-content .comments .comment-form .comment .comment-details .user-name {
+    font-size: 1.4rem;
+    font-weight: bold;  
+}
+
+.pop-up-content .comments .comment-form .comment .comment-details .comment-content {
+    font-size: 1.3rem;
+}
+
+.pop-up-content .comments .comment-form .comment .comment-details .comment-content .comment-btns{
+    text-align: right;
+    padding: 0px 5px;
+    display: none;
+}
+
+.pop-up-content .comments .comment-form .comment .comment-details .comment-content .comment-btns .up-btn{
+    background-color: #4267b2;
+    color: #fff;
+    border: 1px solid #4267b2;
+    border-radius: 3px;
+    padding: 3px 15px;
+    font-size: 1.3rem; 
+    font-weight: bold;
+}
+
+/* comment form end */
 
 .close-modal-btn {
     position: fixed;
@@ -991,4 +1050,8 @@ figure img{
 
 .movie-link {
     background-color: #272727;
+}
+
+form #movie-id {
+    display: none;
 }

@@ -46,8 +46,8 @@ MovieSchema.statics = {
             time: 1,
             star_rating: 1
         }).
-        limit(limit).
         sort({create_at: -1}).
+        limit(limit).
         exec();
     },
 
@@ -67,8 +67,8 @@ MovieSchema.statics = {
             time: 1,
             star_rating: 1
         }).
-        limit(limit).
         sort({create_at: -1}).
+        limit(limit).
         exec();
     },
 
@@ -88,8 +88,8 @@ MovieSchema.statics = {
             time: 1,
             star_rating: 1
         }).
-        limit(limit).
         sort({create_at: -1}).
+        limit(limit).
         exec();
     },
 
@@ -109,8 +109,8 @@ MovieSchema.statics = {
             time: 1,
             star_rating: 1
         }).
-        limit(limit).
         sort({create_at: -1}).
+        limit(limit).
         exec();
     },
 

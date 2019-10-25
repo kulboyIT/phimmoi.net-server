@@ -4,7 +4,7 @@ let Schema = mongoose.Schema;
 let UserSchema = new Schema({
     username: {type: String, trim: true},
     password: String,
-    avatar: {type: String, default: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzlDPRr1xSW0lukY2EmVpAx5Ye1S8H5luUVOK2IqFdcsjCDQxK"},
+    avatar: {type: String, default: "/images/user-avatar/avatar1.png"},
     first_name: {type: String, trim: true},
     last_name: {type: String, trim: true},
 });
@@ -12,6 +12,15 @@ let UserSchema = new Schema({
 UserSchema.statics = {
     createNew(item) {
         return this.create(item);
+    },
+
+    getUserById(userId) {
+        return this.findById(userId, {
+            avatar: 1,
+            first_name: 1,
+            last_name: 1
+        }).
+        exec();
     }
 }
 

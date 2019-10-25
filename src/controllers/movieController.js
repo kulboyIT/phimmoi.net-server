@@ -144,7 +144,7 @@ let getMoviesByKeyword = async (req, res, next) => {
             series: series,
             newestMovies: newestMovies,
             moviesFiltered: moviesFiltered,
-            listTitle: `phim với từ khóa: ${keyword}`
+            listTitle: `từ khóa: ${keyword}`
         });
     } catch (error) {
         console.log(error);

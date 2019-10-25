@@ -110,20 +110,27 @@
                         <div class="title-sm">
                             Bình luận về phim
                         </div>
-                        <div class="comments-list nice-scroll">
+                        <div class="comment-form">
                             <div class="comment">
                                 <div class="avatar">
-                                    <img src="/images/icons/avatar.png" alt="">
+                                    <img src="/images/user-avatar/avatar1.png" alt="">
                                 </div>
                                 <div class="comment-details">
-                                    <div class="user-name">Huy Nguyen</div>
+                                    <div class="user-name">Nguyễn Hải Huy</div>
                                     <div class="comment-content">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, tempore sunt
-                                        molestias voluptatem provident delectus deleniti. Odio facilis commodi nobis,
-                                        numquam nulla nostrum, atque nihil doloremque, tempora blanditiis incidunt deleniti.
+                                        <form action="/comment/add-new" method="POST">
+                                            <textarea name="content" id="comment-content" cols="42" rows="7"></textarea>
+                                            <input type="text" id="movie-id" name="movieId">
+                                            <div class="comment-btns">
+                                                <input class="up-btn" type="submit" value="Đăng">
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="comments-list nice-scroll">
+                            
                         </div>
                     </div>
                 </div>

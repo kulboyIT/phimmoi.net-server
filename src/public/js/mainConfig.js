@@ -1,8 +1,8 @@
 function dropdown() {
-    $('.nav-item').mouseover(function() {
+    $('.nav-item').mouseover(function () {
         $(this).find('.dropdown-list').show();
     });
-    $('.nav-item').mouseout(function() {
+    $('.nav-item').mouseout(function () {
         $(this).find('.dropdown-list').hide();
     });
 }
@@ -11,22 +11,22 @@ function carousel() {
     //let startPos =  $('.top-movie-wrapper').offset().left;
     let step = 1256;
     let counter = 0;
-    $('.top-movie-list').find('.prev-btn').on('click', function(e) {
+    $('.top-movie-list').find('.prev-btn').on('click', function (e) {
         e.preventDefault();
-        if(counter === 0) {
+        if (counter === 0) {
             return false;
         }
         else {
             counter--;
             $('.top-movie-wrapper').animate({
-                left: "+="+step
+                left: "+=" + step
             }, 800);
         }
     })
-    $('.top-movie-list').find('.next-btn').on('click', function(e) {
+    $('.top-movie-list').find('.next-btn').on('click', function (e) {
         e.preventDefault();
-        if(counter === 3) {
-            counter=0;
+        if (counter === 3) {
+            counter = 0;
             $('.top-movie-wrapper').animate({
                 left: 12
             }, 1000);
@@ -35,9 +35,9 @@ function carousel() {
         else {
             counter++;
             $('.top-movie-wrapper').animate({
-                left: "-="+step
+                left: "-=" + step
             }, 800);
-        } 
+        }
     })
 };
 
@@ -46,7 +46,7 @@ function autoCarousel() {
 }
 
 function watchAndTrailerButton(trailerLink, movieLink) {
-    $('.watch-btn').on('click', function(e) {
+    $('.watch-btn').on('click', function (e) {
         e.preventDefault();
         $('.movie-details').hide();
         $('.player-window').show();
@@ -57,7 +57,7 @@ function watchAndTrailerButton(trailerLink, movieLink) {
         $('.player-window').find('video')[0].load();
     });
 
-    $('.trailer-btn').on('click', function(e) {
+    $('.trailer-btn').on('click', function (e) {
         e.preventDefault();
         $('.movie-details').hide();
         $('.player-window').show();
@@ -70,20 +70,20 @@ function watchAndTrailerButton(trailerLink, movieLink) {
 }
 
 function popUpModals() {
-    $('.summary-btn').on('click', function(e) {
+    $('.summary-btn').on('click', function (e) {
         e.preventDefault();
         $('.movie-details').hide();
         $('.movie-summary').show();
         $('.player-window').find('video')[0].pause();
     });
 
-    $('.download-btn').on('click', function(e) {
+    $('.download-btn').on('click', function (e) {
         e.preventDefault();
         $('.movie-details').hide();
         $('.movie-download').show();
     });
 
-    $('.pop-up-bg').on('click', function(e) {
+    $('.pop-up-bg').on('click', function (e) {
         e.preventDefault();
         $('.pop-up-window').hide();
         $('.player-window').find('video')[0].pause();
@@ -91,10 +91,38 @@ function popUpModals() {
 }
 
 function popDownModals() {
-    $('.close-modal-btn').on('click', function(e) {
+    $('.close-modal-btn').on('click', function (e) {
         e.preventDefault();
         $('.pop-up-window').hide();
         $('.player-window').find('video')[0].pause();
+    });
+}
+
+function showHideCommentButton() {
+    let inputComment = $('.pop-up-window').find('form #comment-content');
+    inputComment.focus(function (e) {
+        $('.pop-up-window').find('.comment-btns').show();
+    });
+    inputComment.blur(function (e) {
+        if ($(this).val() === "") {
+            $('.pop-up-window').find('.comment-btns').hide();
+        }
+    });
+}
+
+function addNewComment() {
+    $('.pop-up-window').find('.up-btn').on('click', function(e){
+        e.preventDefault();
+        let commentContent = $('.pop-up-window').find('form #comment-content').val();
+        let movieId = $('.pop-up-window').find('form #movie-id').val();
+        $('.pop-up-window').find('form #comment-content').val('');
+        $.post("/comment/add-new", {
+            commentContent: commentContent,
+            movieId: movieId
+        }, function (data) {
+                console.log(data);
+            }
+        );
     });
 }
 
@@ -102,9 +130,11 @@ $(document).ready(function () {
     $(this).scrollTop(0);
     dropdown();
     carousel();
-    setInterval(function() {
+    setInterval(function () {
         autoCarousel();
     }, 7000);
     popUpModals();
     popDownModals();
+    showHideCommentButton();
+    addNewComment();
 });
