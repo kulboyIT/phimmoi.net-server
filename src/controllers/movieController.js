@@ -135,6 +135,8 @@ let getMoviesByKeyword = async (req, res, next) => {
         let movies = await movie.getMoviesByType('movie');
         let series = await movie.getMoviesByType('series');
         let newestMovies = movies.concat(series);
+        let isLoggedIn = req.isAuthenticated();  
+        let currentUser = req.user;
 
         res.status(200)
         .render('main/movieList', {
@@ -144,7 +146,9 @@ let getMoviesByKeyword = async (req, res, next) => {
             series: series,
             newestMovies: newestMovies,
             moviesFiltered: moviesFiltered,
-            listTitle: `từ khóa: ${keyword}`
+            listTitle: `từ khóa: ${keyword}`,
+            isLoggedIn: isLoggedIn,
+            currentUser: currentUser
         });
     } catch (error) {
         console.log(error);

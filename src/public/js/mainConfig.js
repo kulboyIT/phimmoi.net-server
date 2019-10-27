@@ -91,7 +91,7 @@ function popUpModals() {
 }
 
 function popDownModals() {
-    $('.close-modal-btn').on('click', function (e) {
+    $('.close-movie-details-modal   ').on('click', function (e) {
         e.preventDefault();
         $('.pop-up-window').hide();
         $('.player-window').find('video')[0].pause();
@@ -110,19 +110,42 @@ function showHideCommentButton() {
     });
 }
 
+function sendAddCommentRequest(e) {
+    e.preventDefault();
+    let commentContent = $('.pop-up-window').find('form #comment-content').val();
+    let movieId = $('.pop-up-window').find('form #movie-id').val();
+    $('.pop-up-window').find('form #comment-content').val('');
+    $('.pop-up-window').find('form .comment-btns').hide();
+    $.post("/comment/add-new", {
+        commentContent: commentContent,
+        movieId: movieId
+    }, function (data) {
+        let commentListElem = $('.comment-list');
+        let avatar = $('#comment-posible').find('.avatar img').attr('src');
+        let userName = $('#comment-posible').find('.comment-details .user-name').text();
+        commentListElem.prepend(`<div class="comment">
+        <div class="avatar">
+            <img src="${avatar}" alt="">
+        </div>
+        <div class="comment-details">
+            <div class="user-name">${userName}</div>
+            <div class="comment-content">
+                ${commentContent}
+            </div>
+        </div>
+        </div>`);
+    });
+}
+
 function addNewComment() {
-    $('.pop-up-window').find('.up-btn').on('click', function(e){
-        e.preventDefault();
-        let commentContent = $('.pop-up-window').find('form #comment-content').val();
-        let movieId = $('.pop-up-window').find('form #movie-id').val();
-        $('.pop-up-window').find('form #comment-content').val('');
-        $.post("/comment/add-new", {
-            commentContent: commentContent,
-            movieId: movieId
-        }, function (data) {
-                console.log(data);
-            }
-        );
+    $('.pop-up-window').find('.up-btn').on('click', function (e) {
+        sendAddCommentRequest(e);
+    });
+
+    $('.pop-up-window').find('form #comment-content').on('keydown', function (e) {
+        if (e.which === 13) {
+            sendAddCommentRequest(e);
+        }
     });
 }
 
@@ -130,11 +153,14 @@ $(document).ready(function () {
     $(this).scrollTop(0);
     dropdown();
     carousel();
+    //auto spin carousel
     setInterval(function () {
         autoCarousel();
     }, 7000);
     popUpModals();
     popDownModals();
     showHideCommentButton();
+    showHideLoginForm();
     addNewComment();
+    loginRegisterchange();
 });

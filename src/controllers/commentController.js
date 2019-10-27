@@ -17,7 +17,7 @@ let getMovieComments = async (req, res, next) => {
 
 let addNewComment = async (req, res, next) => {
     let movieId = req.body.movieId;
-    let userId = "5db2b6d681768725c4862a88";
+    let userId = req.user._id;
     let commentContent = req.body.commentContent;
     
     let result = await comment.addNewComment(movieId, userId, commentContent);
