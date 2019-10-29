@@ -37,6 +37,33 @@
     <%- include('footer/footer.ejs') %>
     <!-- Footer end -->
 
+    <% if(isLoggedIn) {%>
+    <button title="Đăng xuất" class="logout-btn">
+        <img src="/images/icons/logout-icon.png" alt="">
+    </button>
+    <button title="Đăng nhập" class="login-btn" style="display: none;">
+        <img src="/images/icons/login-icon.png" alt="">
+    </button>
+    <% } else { %>
+    <button title="Đăng nhập" class="login-btn">
+        <img src="/images/icons/login-icon.png" alt="">
+    </button>
+    <button title="Đăng xuất" class="logout-btn" style="display: none;">
+        <img src="/images/icons/logout-icon.png" alt="">
+    </button>
+    <% } %>
+
+    <% if(errors.length) { %>
+    <script>
+            alert('<%=errors%>');
+    </script>
+    <% } %>
+    <% if(successes.length) { %>
+    <script>
+            alert('<%=successes%>'); 
+    </script>
+    <% } %>
+
     <!-- Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -45,6 +72,7 @@
     <!-- My scripts -->
     <script src="/js/mainConfig.js"></script>
     <script src="/js/getMovieDetails.js"></script>
+    <script src="/js/loginRegister.js"></script>
 </body>
 
 </html>

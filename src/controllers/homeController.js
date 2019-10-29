@@ -10,8 +10,12 @@ let getHomePage = async (req, res, next) => {
     let scifiMovies = await movie.getMoviesByCategoryTitle(categoryTitle.SCIFI_VN);
     let scaryMovies =  await movie.getMoviesByCategoryTitle(categoryTitle.SCARY_VN);
     let newestMovies = movies.concat(series);
- 
+    let isLoggedIn = req.isAuthenticated();   
+    let currentUser = req.user;
+
     res.render('main/homePage', {
+        errors: req.flash("errors"),
+        successes: req.flash("successes"),  
         categories: categories,
         countries: countries,
         movies: movies,
@@ -19,7 +23,9 @@ let getHomePage = async (req, res, next) => {
         newestMovies: newestMovies,
         actionMovies: actionMovies,
         scifiMovies: scifiMovies,
-        scaryMovies: scaryMovies
+        scaryMovies: scaryMovies,
+        isLoggedIn: isLoggedIn,
+        currentUser: currentUser
     });
 }
 

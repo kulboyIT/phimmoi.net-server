@@ -1,8 +1,11 @@
 import express from "express";
-import {home, movie, comment} from "../controllers";
+import {home, movie, comment, user, auth} from "../controllers";
+import initPassportLocal from "../controllers/passportController/local";
+import passport from "passport";
 
 let router = express.Router();
 
+initPassportLocal();
 
 /**
  * Initial Routes
@@ -24,7 +27,18 @@ let initRoutes = app => {
 
     router.get("/search", movie.getMoviesByKeyword);
 
-    router.post("/comment/add-new", comment.addNewComment);
+    router.post("/comment/add-new", auth.checkLoggedIn, comment.addNewComment);
+
+    router.post("/user/add-new", auth.checkLoggedOut, user.addNewUser);
+
+    router.post("/login", auth.checkLoggedOut, passport.authenticate("local", {
+        successRedirect: "/",
+        failureRedirect: "/",
+        successFlash: true,
+        failureFlash: true
+    }));
+    
+    router.get("/logout", auth.checkLoggedIn, auth.getLogout);
 
     return app.use('/', router);
 }

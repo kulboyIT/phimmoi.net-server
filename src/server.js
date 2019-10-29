@@ -3,6 +3,9 @@ import bodyParser from "body-parser";
 import initRoutes from "./routes/api";
 import viewEngineConfig from "./config/viewEngine";
 import connectDb from "./config/connectDb";
+import session from "./config/session";
+import passport from "passport";
+import connectFlash from "connect-flash";
 
 let app = express();
 
@@ -15,11 +18,21 @@ app.use(express.static('src/public'));
 //use body parser
 app.use(bodyParser.urlencoded({extended: true}));
 
-//set viewengine
-viewEngineConfig(app);
-
 //connect to MongoDb
 connectDb();
+
+//session config
+session.config(app);
+
+//use connect flash
+app.use(connectFlash());
+
+//view engine config
+viewEngineConfig(app);
+
+//passport config
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Initial routes
 initRoutes(app);

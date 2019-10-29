@@ -119,7 +119,7 @@ function requestForMovieInfos(movieId) {
 function getMovieComments(movieId) {
     $.get(`/movie/comments/${movieId}`,
         function (comments) {
-            let commentListElem = $('.comments-list');
+            let commentListElem = $('.comment-list');
             commentListElem.empty();
             comments.forEach(function (comment) {
 
