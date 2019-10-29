@@ -33,7 +33,9 @@ let initRoutes = app => {
 
     router.post("/login", auth.checkLoggedOut, passport.authenticate("local", {
         successRedirect: "/",
-        failureRedirect: "/"
+        failureRedirect: "/",
+        successFlash: true,
+        failureFlash: true
     }));
     
     router.get("/logout", auth.checkLoggedIn, auth.getLogout);

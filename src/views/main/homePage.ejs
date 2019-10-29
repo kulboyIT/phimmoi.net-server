@@ -38,19 +38,30 @@
     <!-- Footer end -->
 
     <% if(isLoggedIn) {%>
-        <button title="Đăng xuất" class="logout-btn">
-            <img src="/images/icons/logout-icon.png" alt="">
-        </button>
-        <button title="Đăng nhập" class="login-btn" style="display: none;">
-            <img src="/images/icons/login-icon.png" alt="">
-        </button>
+    <button title="Đăng xuất" class="logout-btn">
+        <img src="/images/icons/logout-icon.png" alt="">
+    </button>
+    <button title="Đăng nhập" class="login-btn" style="display: none;">
+        <img src="/images/icons/login-icon.png" alt="">
+    </button>
     <% } else { %>
-        <button title="Đăng nhập" class="login-btn">
-            <img src="/images/icons/login-icon.png" alt="">
-        </button>
-        <button title="Đăng xuất" class="logout-btn" style="display: none;">
-            <img src="/images/icons/logout-icon.png" alt="">
-        </button>
+    <button title="Đăng nhập" class="login-btn">
+        <img src="/images/icons/login-icon.png" alt="">
+    </button>
+    <button title="Đăng xuất" class="logout-btn" style="display: none;">
+        <img src="/images/icons/logout-icon.png" alt="">
+    </button>
+    <% } %>
+
+    <% if(errors.length) { %>
+    <script>
+            alert('<%=errors%>');
+    </script>
+    <% } %>
+    <% if(successes.length) { %>
+    <script>
+            alert('<%=successes%>'); 
+    </script>
     <% } %>
 
     <!-- Libraries -->

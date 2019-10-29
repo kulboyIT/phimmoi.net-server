@@ -5,6 +5,7 @@ import viewEngineConfig from "./config/viewEngine";
 import connectDb from "./config/connectDb";
 import session from "./config/session";
 import passport from "passport";
+import connectFlash from "connect-flash";
 
 let app = express();
 
@@ -22,6 +23,9 @@ connectDb();
 
 //session config
 session.config(app);
+
+//use connect flash
+app.use(connectFlash());
 
 //view engine config
 viewEngineConfig(app);

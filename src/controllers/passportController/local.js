@@ -13,31 +13,19 @@ let initPassportLocal = () => {
         try {
             let user = await User.getUserByUsername(username);
             if (!user) {
-                return done(null, false, { 
-                    type: "fail", 
-                    message: "Login failed!!!" 
-                });
+                return done(null, false, req.flash("errors", "Đăng nhập thất bại!"));
             }
 
             let checkPassword = await user.comparePassword(password);
 
             if (!checkPassword) {
-                return done(null, false, { 
-                    type: "fail", 
-                    message: "Login failed!!!" 
-                });
+                return done(null, false, req.flash("errors", "Đăng nhập thất bại!"));
             }
 
-            return done(null, user, { 
-                type: "succeed", 
-                message: "Login succeed!!!" 
-            });
+            return done(null, user, req.flash("successes", "Đăng nhập thành công!"));
         } catch (error) {
             console.log(error);
-            return done(null, false, {
-                type: "fail",
-                message: "Server Error!!!"
-            });
+            return done(null, false, req.flash("errors", "Đăng nhập thất bại!"));
         }
     }));
 

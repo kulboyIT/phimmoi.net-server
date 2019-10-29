@@ -8,8 +8,13 @@ function dropdown() {
 }
 
 function carousel() {
-    //let startPos =  $('.top-movie-wrapper').offset().left;
-    let step = 1256;
+    let itemWidth = 313;
+    let itemNumber = 16;
+    let carouselWidth = $('.top-movie-list').width();
+    let itemsInOneStep = Math.floor(carouselWidth/itemWidth);
+    let maxCount = Math.floor(itemNumber/itemsInOneStep)-1;
+    let step = itemsInOneStep*itemWidth + 10;
+
     let counter = 0;
     $('.top-movie-list').find('.prev-btn').on('click', function (e) {
         e.preventDefault();
@@ -25,10 +30,10 @@ function carousel() {
     })
     $('.top-movie-list').find('.next-btn').on('click', function (e) {
         e.preventDefault();
-        if (counter === 3) {
+        if (counter === maxCount) {
             counter = 0;
             $('.top-movie-wrapper').animate({
-                left: 12
+                left: 0
             }, 1000);
             return false;
         }
@@ -154,9 +159,9 @@ $(document).ready(function () {
     dropdown();
     carousel();
     //auto spin carousel
-    setInterval(function () {
-        autoCarousel();
-    }, 7000);
+    // setInterval(function () {
+    //     autoCarousel();
+    // }, 7000);
     popUpModals();
     popDownModals();
     showHideCommentButton();

@@ -4,7 +4,6 @@ function showHideLoginForm() {
         $('.pop-up-login').show();
         $('.pop-up-login').find('.login-form').show();
         $('.pop-up-login').find('.register-form').hide();
-        $('.pop-up-login .validate-box').css('height', '250px');
     });
 
     $('.open-login').on('click', function (e) {
@@ -18,14 +17,12 @@ function showHideLoginForm() {
         e.preventDefault();
         $('.pop-up-login').hide();
         $('.register-form').find('.notifications .fail').hide();
-        $('.pop-up-login .validate-box').css('height', '332px');
     });
 
     $('.pop-up-login .pop-up-bg').on('click', function (e) {
         e.preventDefault();
         $('.pop-up-login').hide();
         $('.register-form').find('.notifications .fail').hide();
-        $('.pop-up-login .validate-box').css('height', '332px');
     });
 }
 
@@ -35,14 +32,12 @@ function loginRegisterchange() {
         $('.pop-up-login').find('.section-title').text('Đăng nhập');
         $('.pop-up-login').find('.register-form').hide();
         $('.pop-up-login').find('.login-form').show();
-        $('.pop-up-login .validate-box').css('height', '250px');
     });
     $('#open-register').on('click', function (e) {
         e.preventDefault();
         $('.pop-up-login').find('.section-title').text('Đăng ký');
         $('.pop-up-login').find('.register-form').show();
         $('.pop-up-login').find('.login-form').hide();
-        $('.pop-up-login .validate-box').css('height', '332px');
     });
 }
 
@@ -60,14 +55,12 @@ function validateRegisterForm() {
         || lastName === "") {
         $('.register-form').find('.notifications .fail').text('Không được bỏ trống ô nào!');
         $('.register-form').find('.notifications .fail').show();
-        $('.pop-up-login .validate-box').css('height', '370px');
         return false;
     }
 
     if (password !== confirmPassword) {
         $('.register-form').find('.notifications .fail').text('Mật khẩu xác nhận không trùng khớp!');
         $('.register-form').find('.notifications .fail').show();
-        $('.pop-up-login .validate-box').css('height', '370px');
         $('.register-form').find('.password').val("");
         $('.register-form').find('.confirm-password').val("");
         return false;
@@ -79,23 +72,18 @@ function validateRegisterForm() {
 function hideNotifications() {
     $('.register-form').find('.username').focus(function(e) {
         $('.register-form').find('.notifications .fail').hide();
-        $('.pop-up-login .validate-box').css('height', '332px');
     });
     $('.register-form').find('.password').focus(function(e) {
         $('.register-form').find('.notifications .fail').hide();
-        $('.pop-up-login .validate-box').css('height', '332px');
     });
     $('.register-form').find('.confirm-password').focus(function(e) {
         $('.register-form').find('.notifications .fail').hide();
-        $('.pop-up-login .validate-box').css('height', '332px');
     });
     $('.register-form').find('.first-name').focus(function(e) {
         $('.register-form').find('.notifications .fail').hide();
-        $('.pop-up-login .validate-box').css('height', '332px');
     });
     $('.register-form').find('.last-name').focus(function(e) {
         $('.register-form').find('.notifications .fail').hide();
-        $('.pop-up-login .validate-box').css('height', '332px');
     });
 }
 
@@ -118,7 +106,6 @@ function signUp() {
                     } else {
                         $('.register-form').find('.notifications .fail').text(data.message);
                         $('.register-form').find('.notifications .fail').show();
-                        $('.pop-up-login .validate-box').css('height', '370px');
                         $('.register-form').trigger('reset');
                     }
                 }

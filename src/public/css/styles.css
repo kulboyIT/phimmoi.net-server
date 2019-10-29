@@ -1,5 +1,5 @@
 * {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
     font-size: 12px;
 }
 
@@ -89,12 +89,12 @@ html, body {
 
     .movie-cate .movie-cate-list ul li {
         display: inline-block;
-        width: 45%;
+        width: 47%;
         height: 260px;
         margin: 5px 3px;
     }
 
-    .col-sm-4 {
+    .col-lg-4 {
         width: 100%;
         height: auto;
     }
@@ -134,7 +134,7 @@ html, body {
         overflow: hidden;
     }  
 
-    .pop-up-content .col-sm-4 {
+    .pop-up-content .col-lg-4 {
         height: 100%;
     }
     
@@ -161,19 +161,16 @@ html, body {
 
     .movie-cate .movie-cate-list ul li {
         display: inline-block;
-        width: 23%;
+        width: 23.7%;
         height: 260px;
         margin: 5px 3px;
     }
 }
 
-body {
-    margin-top: -20px;
-}
-
 header {
     background-color: #1d1d1d;
     width: 100%;
+    margin-top: -20px;
     min-height: 86px;
     height: auto;
     border-bottom: 3px solid #5c5c5c;
@@ -236,7 +233,7 @@ hr {
     width: 100%;
     height: 430px;
     background-color: #252525;
-    padding: 15px 10px;
+    padding: 0;
     overflow: hidden;
     position: relative;
 }
@@ -244,7 +241,7 @@ hr {
 .top-movie-wrapper {
     width: 20000px;
     top: 0;
-    height: 95%;
+    height: 96%;
     margin: 10px 0;
     overflow: auto;
     position: absolute;
@@ -301,7 +298,7 @@ footer .cate-item a{
     background-size: 100% 100%;
     width: 300px;
     height: 100%;
-    margin: 0 5px;
+    margin: 0 6.5px;
     display: inline-block;
     position: relative;
 }
@@ -862,14 +859,15 @@ figure img{
 }
 
 .pop-up-login .validate-box {
-    width: 500px;
+    width: 400px;
     height: auto;
     background-color: #2c2c2c;
-    margin: 20% 30%;
+    margin-top: 15px;
     padding: 15px 20px;
     z-index: 2000;
     position: relative;
     display: block;
+    float: right;
 }
 
 .pop-up-login .validate-box .close-modal-btn {
@@ -896,7 +894,7 @@ figure img{
 
 .pop-up-login .validate-box .register-form a,
 .pop-up-login .validate-box .login-form a {
-    margin-left: 300px;
+    margin: auto;
 }
 
 /* .pop-up-login .validate-box .login-form {
@@ -1139,6 +1137,7 @@ figure img{
 
 .movie-link {
     background-color: #272727;
+    overflow: hidden;
 }
 
 form #movie-id {

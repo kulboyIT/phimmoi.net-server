@@ -14,6 +14,8 @@ let getHomePage = async (req, res, next) => {
     let currentUser = req.user;
 
     res.render('main/homePage', {
+        errors: req.flash("errors"),
+        successes: req.flash("successes"),  
         categories: categories,
         countries: countries,
         movies: movies,

@@ -1,6 +1,6 @@
 let getLogout = (req, res) => {
   req.logout();
-  return res.status(200).send({message: "Logged out!"});
+  return res.status(200).send({message: "Đăng xuất thành công!"});
 }
 
 let checkLoggedIn = (req, res, next) => {
