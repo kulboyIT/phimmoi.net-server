@@ -14,6 +14,8 @@ initPassportLocal();
 let initRoutes = app => {
     router.get("/", home.getHomePage);
 
+    router.get("/movie/phim-le", movie.getOddMovies);
+
     router.get("/movie/info/:movieId", movie.getMovieInfo);
     router.get("/movie/comments/:movieId", comment.getMovieComments)
 
