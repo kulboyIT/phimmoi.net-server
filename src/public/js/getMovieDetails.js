@@ -63,7 +63,7 @@ function showMovieInfos(movieInfo, movieCategories, movieCountries) {
  * @param {String} movieId 
  */
 function requestForMovieInfos(movieId) {
-    $.get(`/movie/info/${movieId}`,
+    $.get(`http://localhost:3000/movie/info/${movieId}`,
         function (data) {
             let movieInfo = data.movieInfo;
             let movieCategories = data.movieCategories;
@@ -74,8 +74,8 @@ function requestForMovieInfos(movieId) {
             //movie-thumbnail
             let movieThumbnailBig = $('.pop-up-content').find('.thumb .thumb-bg');
             let movieThumbnailSm = $('.pop-up-content').find('.thumb-sm .thumb-bg');
-            movieThumbnailBig.attr('src', movieInfo.thumbnail);
-            movieThumbnailSm.attr('src', movieInfo.thumbnail);
+            movieThumbnailBig.attr('src', 'http://localhost:3000'+movieInfo.thumbnail);
+            movieThumbnailSm.attr('src', 'http://localhost:3000'+movieInfo.thumbnail);
 
             //movie-title
             let movieTitle = $('.pop-up-content').find('.movie-info');
@@ -117,7 +117,7 @@ function requestForMovieInfos(movieId) {
 
 
 function getMovieComments(movieId) {
-    $.get(`/movie/comments/${movieId}`,
+    $.get(`http://localhost:3000/comment/${movieId}`,
         function (comments) {
             let commentListElem = $('.comment-list');
             commentListElem.empty();
@@ -125,7 +125,7 @@ function getMovieComments(movieId) {
 
                 commentListElem.append(`<div class="comment">
                 <div class="avatar">
-                    <img src="${comment.userInfo.avatar}" alt="">
+                    <img src="http://localhost:3000${comment.userInfo.avatar}" alt="">
                 </div>
                 <div class="comment-details">
                     <div class="user-name">${comment.userInfo.first_name} ${comment.userInfo.last_name}</div>
@@ -140,10 +140,11 @@ function getMovieComments(movieId) {
 }
 
 function getMovieDetails() {
-    $('.movie-link').parent().on('click', function (e) {
+    $('.movie-detail-link').off('click').on('click', function (e) {
         e.preventDefault();
         $('.pop-up-window').find('form #comment-content').val('');
         let target = $(this).data('target');
+        console.log(target);
         requestForMovieInfos(target);
         getMovieComments(target);
         $('.pop-up-window').show();
@@ -151,7 +152,3 @@ function getMovieDetails() {
         $('.movie-summary').show();
     });
 }
-
-$(document).ready(function () {
-    getMovieDetails();
-});

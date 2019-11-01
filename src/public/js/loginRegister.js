@@ -99,7 +99,7 @@ function signUp() {
         };
         
         if(validateRegisterForm()) {
-            $.post("/user/add-new", {newUser: newUser},
+            $.post("http://localhost:3000/register", {newUser: newUser},
                 function (data) {
                     if(data.type === "succeed") {
                         $('#open-login').click();
@@ -117,7 +117,7 @@ function signUp() {
 function logout() {
     $('.logout-btn').on('click', function(e) {
         e.preventDefault();
-        $.get('/logout', function(data) {
+        $.get('http://localhost:3000/logout', function(data) {
             $('.logout-btn').hide();
             $('.login-btn').show();
             $('#comment-posible').hide();
@@ -127,11 +127,3 @@ function logout() {
         });
     })
 }
-
-$(document).ready(function () {
-    showHideLoginForm();
-    loginRegisterchange();
-    signUp();
-    hideNotifications();
-    logout();
-});
