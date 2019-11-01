@@ -6,6 +6,7 @@ import connectDb from "./config/connectDb";
 import session from "./config/session";
 import passport from "passport";
 import connectFlash from "connect-flash";
+import cors from 'cors';
 
 let app = express();
 
@@ -33,6 +34,8 @@ viewEngineConfig(app);
 //passport config
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(cors());
 
 //Initial routes
 initRoutes(app);

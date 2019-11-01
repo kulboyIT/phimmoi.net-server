@@ -181,11 +181,22 @@ let getMoviesByKeyword = async (req, res, next) => {
     }
 }
 
+let getOddMovies = async (req, res, next) => {
+    try {
+        let movies = await movie.getMoviesByType('movie');
+        res.status(200).send(movies);   
+    } catch (error) {
+        console.log(error);
+        res.status(5000).send("Server Error!");
+    }
+}
+
 module.exports = {
     getMovieInfo: getMovieInfo,
     getMoviesByCategoryId: getMoviesByCategoryId,
     getMoviesByCountryId: getMoviesByCountryId,
     getMovies: getMovies,
     getSeries: getSeries,
-    getMoviesByKeyword: getMoviesByKeyword
+    getMoviesByKeyword: getMoviesByKeyword,
+    getOddMovies: getOddMovies
 };
