@@ -116,6 +116,15 @@ MovieSchema.statics = {
 
     getMovieById(movieId) {
         return this.findById(movieId).exec();
+    },
+
+    getNewMovies(limit) {
+        return this.find({
+
+        }).
+        sort({create_at: -1}).
+        limit(limit).
+        exec();
     }
 }
 

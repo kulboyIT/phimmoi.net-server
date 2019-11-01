@@ -1,7 +1,6 @@
 import express from "express";
-import {home, movie, comment, user, auth} from "../controllers";
+import {home, movie, comment, user, auth, category, country} from "../controllers";
 import initPassportLocal from "../controllers/passportController/local";
-import passport from "passport";
 
 let router = express.Router();
 
@@ -14,33 +13,26 @@ initPassportLocal();
 let initRoutes = app => {
     router.get("/", home.getHomePage);
 
-    router.get("/movie/phim-le", movie.getOddMovies);
+    router.get("/category/get-all", category.getAllCategories);
 
+    router.get("/country/get-all", country.getAllCountries);
+
+    router.get("/movie/new-movies", movie.getNewMovies);
+    router.get("/movie/movies", movie.getMovies);
+    router.get("/movie/series", movie.getSeries)
     router.get("/movie/info/:movieId", movie.getMovieInfo);
-    router.get("/movie/comments/:movieId", comment.getMovieComments)
+    router.get("/movie/category/:categoryId", movie.getMoviesByCategoryId);
+    router.get("/movie/country/:countryId", movie.getMoviesByCountryId);
+    router.get("/movie/search", movie.getMoviesByKeyword);
 
-    router.get("/category/:categoryId", movie.getMoviesByCategoryId);
-
-    router.get("/country/:countryId", movie.getMoviesByCountryId);
-
-    router.get("/phim-le", movie.getMovies);
-
-    router.get("/phim-bo", movie.getSeries);
-
-    router.get("/search", movie.getMoviesByKeyword);
-
+    router.get("/comment/:movieId", comment.getMovieComments);
     router.post("/comment/add-new", auth.checkLoggedIn, comment.addNewComment);
 
-    router.post("/user/add-new", auth.checkLoggedOut, user.addNewUser);
-
-    router.post("/login", auth.checkLoggedOut, passport.authenticate("local", {
-        successRedirect: "/",
-        failureRedirect: "/",
-        successFlash: true,
-        failureFlash: true
-    }));
-    
+    router.post("/register", auth.checkLoggedOut, user.addNewUser);
+    router.post("/login", auth.checkLoggedOut, auth.passportAuth);
     router.get("/logout", auth.checkLoggedIn, auth.getLogout);
+
+    router.get("/get-log-in-status", auth.getLoginStatus);
 
     return app.use('/', router);
 }

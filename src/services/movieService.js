@@ -36,6 +36,18 @@ let getMoviesByCategoryTitle = (categoryTitle, limitNumb = LIMIT_NUMBER) => {
     })
 }
 
+let getMoviesByCountryName = (countryName, limitNumb = LIMIT_NUMBER) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let countryId = await Country.getIdByTitle(countryName);
+            let movies = await Movie.getMoviesByCountryId(countryId._id, limitNumb);
+            resolve(movies);
+        } catch (error) {
+            reject(error);
+        }
+    })
+}
+
 let getMoviesByCategoryId = (categoryId, limitNumb = LIMIT_NUMBER) => {
     return new Promise(async (resolve, reject) => {
         try {
@@ -95,11 +107,24 @@ let getMoviesByKeyword = (keyword, limitNumb = LIMIT_NUMBER) => {
     });
 }
 
+let getNewMovies = (limitNumb = LIMIT_NUMBER) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            let movie = await Movie.getNewMovies(limitNumb);
+            resolve(movie);
+        } catch (error) {
+            reject(error);
+        }
+    })
+}
+
 module.exports = {
     getMoviesByType: getMoviesByType,
     getMoviesByCategoryTitle: getMoviesByCategoryTitle,
+    getMoviesByCountryName: getMoviesByCountryName,
     getMovieById: getMovieById,
     getMoviesByCategoryId: getMoviesByCategoryId,
     getMoviesByCountryId: getMoviesByCountryId,
-    getMoviesByKeyword: getMoviesByKeyword
+    getMoviesByKeyword: getMoviesByKeyword,
+    getNewMovies: getNewMovies
 }

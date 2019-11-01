@@ -1216,3 +1216,11 @@ form #movie-id {
 .clear {
     clear: both;
 }
+
+.pop-up-content .col-lg-8 {
+    overflow: auto;
+}
+
+.pop-up-content .col-lg-4 {
+    overflow: auto;
+}
