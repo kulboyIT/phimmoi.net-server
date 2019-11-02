@@ -1,4 +1,5 @@
 import express from "express";
+import passport from "passport";
 import {home, movie, comment, user, auth, category, country} from "../controllers";
 import initPassportLocal from "../controllers/passportController/local";
 
@@ -29,7 +30,12 @@ let initRoutes = app => {
     router.post("/comment/add-new", auth.checkLoggedIn, comment.addNewComment);
 
     router.post("/register", auth.checkLoggedOut, user.addNewUser);
-    router.post("/login", auth.checkLoggedOut, auth.passportAuth);
+    router.post("/login", auth.checkLoggedOut, passport.authenticate("local", {
+        successRedirect: "/",
+        failureRedirect: "/",
+        successFlash: true,
+        failureFlash: true
+    }));
     router.get("/logout", auth.checkLoggedIn, auth.getLogout);
 
     router.get("/get-log-in-status", auth.getLoginStatus);
