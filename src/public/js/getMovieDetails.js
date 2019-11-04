@@ -144,7 +144,6 @@ function getMovieDetails() {
         e.preventDefault();
         $('.pop-up-window').find('form #comment-content').val('');
         let target = $(this).data('target');
-        console.log(target);
         requestForMovieInfos(target);
         getMovieComments(target);
         $('.pop-up-window').show();

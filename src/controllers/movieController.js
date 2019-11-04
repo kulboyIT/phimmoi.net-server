@@ -4,11 +4,14 @@ let getNewMovies = async (req, res, next) => {
     let limit = parseInt(req.query.limit);
 
     try {
-        let movieInfo = await movie.getNewMovies(limit);
-        if (!movieInfo) {
+        let movies = await movie.getNewMovies(limit);
+        if (!movies) {
             return res.status(500).send("Server Error!!!");
         } else {
-            return res.status(200).send(movieInfo);
+            return res.status(200).send({
+                movies: movies,
+                listTitle: `Phim mới`
+            });
         }
     } catch (error) {
         console.log(error)
@@ -41,7 +44,10 @@ let getMoviesByCategoryId = async (req, res, next) => {
         if (!movies) {
             return res.status(500).send("Server Error!!!");
         } else {
-            res.status(200).send(movies);
+            res.status(200).send({
+                movies: movies,
+                listTitle: `Phim ${categoryTitle.title}`
+            });
         }
     } catch (error) {
         console.log(error);
@@ -60,7 +66,10 @@ let getMoviesByCountryId = async (req, res, next) => {
         if (!movies) {
             return res.status(500).send("Server Error!!!");
         } else {
-            res.status(200).send(movies);
+            res.status(200).send({
+                movies: movies,
+                listTitle: `Phim ${countryName.title}`
+            });
         }
     } catch (error) {
         console.log(error);
@@ -70,14 +79,16 @@ let getMoviesByCountryId = async (req, res, next) => {
 
 let getMoviesByKeyword = async (req, res, next) => {
     let keyword = req.query.keyword;
-
     try {
         let movies = await movie.getMoviesByKeyword(keyword, 20);
 
         if (!movies) {
             return res.status(500).send("Server Error!!!");
         } else {
-            res.status(200).send(movies);
+            res.status(200).send({
+                movies: movies,
+                listTitle: `Kết quả với từ khóa ${keyword}:`
+            });
         }
     } catch (error) {
         console.log(error);
@@ -90,7 +101,10 @@ let getMovies = async (req, res, next) => {
     
     try {
         let movies = await movie.getMoviesByType('movie', limit);
-        res.status(200).send(movies);   
+        res.status(200).send({
+            movies: movies,
+            listTitle: 'Phim lẻ'
+        });   
     } catch (error) {
         console.log(error);
         res.status(500).send("Server Error!");
@@ -102,7 +116,10 @@ let getSeries = async (req, res, next) => {
 
     try {
         let movies = await movie.getMoviesByType('series', limit);
-        res.status(200).send(movies);   
+        res.status(200).send({
+            movies: movies,
+            listTitle: 'Phim bộ'
+        });   
     } catch (error) {
         console.log(error);
         res.status(500).send("Server Error!");
