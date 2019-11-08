@@ -7,7 +7,7 @@ let getMovieComments = (movieId) => {
             let comments = await Comment.getByMovieId(movieId);
             let commentsPromise = comments.map(async (comment) => {
                 let userInfo = await User.getUserById(comment.user_id);
-                userInfo = userInfo.toObject();
+                //userInfo = userInfo.toObject();
                 return {
                     content: comment.content,
                     userInfo: userInfo
