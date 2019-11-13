@@ -23,9 +23,9 @@ let addNewComment = async (req, res, next) => {
     let result = await comment.addNewComment(movieId, userId, commentContent);
 
     if (!result) {
-        return res.status(500).send("Server Error!!!");
+        return res.status(500).send({message:"Server Error!!!", done: false});
     } else {
-        return res.status(200).send("Succeed!!!");
+        return res.status(200).send({message:"Server Error!!!", done: true});
     }
 }
 

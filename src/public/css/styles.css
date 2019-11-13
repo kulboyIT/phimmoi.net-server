@@ -1185,7 +1185,7 @@ form #user-id {
 
 .notifications .success,
 .notifications .fail {
-    height: 30px;
+    height: auto;
     font-size: 1.2rem;
     text-align: center;
     color: #fff;

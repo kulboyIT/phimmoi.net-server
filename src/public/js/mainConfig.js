@@ -117,30 +117,43 @@ function showHideCommentButton() {
 
 function sendAddCommentRequest(e) {
     e.preventDefault();
-    let commentContent = $('.pop-up-window').find('form #comment-content').val();
+    let commentContent = $('.pop-up-window').find('form #comment-content').val().trim();
     let movieId = $('.pop-up-window').find('form #movie-id').val();
     let userId = $('.pop-up-window').find('form #user-id').val();
+    if(commentContent === "") {
+        return 0;
+    }
     $('.pop-up-window').find('form #comment-content').val('');
     $('.pop-up-window').find('form .comment-btns').hide();
+
+    let isAuthenticated = false;
+    if (localStorage.getItem('usertoken') === null) isAuthenticated = false;
+    else isAuthenticated = true;
+
     $.post("http://localhost:3000/comment/add-new", {
         commentContent: commentContent,
         movieId: movieId,
-        userId: userId
+        userId: userId,
+        isAuthenticated: isAuthenticated
     }, function (data) {
-        let commentListElem = $('.comment-list');
-        let avatar = $('#comment-posible').find('.avatar img').attr('src');
-        let userName = $('#comment-posible').find('.comment-details .user-name').text();
-        commentListElem.prepend(`<div class="comment">
-        <div class="avatar">
-            <img src="${avatar}" alt="">
-        </div>
-        <div class="comment-details">
-            <div class="user-name">${userName}</div>
-            <div class="comment-content">
-                ${commentContent}
+        if(data.done) {
+            let commentListElem = $('.comment-list');
+            let avatar = $('#comment-posible').find('.avatar img').attr('src');
+            let userName = $('#comment-posible').find('.comment-details .user-name').text();
+            commentListElem.prepend(`<div class="comment">
+            <div class="avatar">
+                <img src="${avatar}" alt="">
             </div>
-        </div>
-        </div>`);
+            <div class="comment-details">
+                <div class="user-name">${userName}</div>
+                <div class="comment-content">
+                    ${commentContent}
+                </div>
+            </div>
+            </div>`);
+        } else {
+            alert(data.message);
+        }
     });
 }
 
