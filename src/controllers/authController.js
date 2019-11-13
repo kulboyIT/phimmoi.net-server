@@ -7,25 +7,19 @@ let getLogout = (req, res) => {
 }
 
 let checkLoggedIn = (req, res, next) => {
-  if(!req.isAuthenticated()){
-    return res.send({message:'not logged in!!!', done: false});
+  console.log(req.body);
+  if(req.body.isAuthenticated === 'false') {
+    return res.send({message:'You are not logged in!!!', done: false});
   }
   next();
 }
 
 let checkLoggedOut = (req, res, next) => {
-  if(req.isAuthenticated()){
-    return res.send({message:'logged in!!!', done: false});;
+  console.log(req.body);
+  if(req.body.isAuthenticated === 'true') {
+    return res.send({message:'You are logged in!!!', done: false});;
   }
   next();
-}
-
-let getLoginStatus = (req, res, next) => {
-  if(!req.isAuthenticated()){
-    return res.send(false);
-  } else {
-    return res.send(true);
-  }
 }
 
 let passportAuth = (req, res, next) => {
@@ -54,6 +48,5 @@ module.exports = {
   getLogout: getLogout,
   checkLoggedOut: checkLoggedOut,
   checkLoggedIn: checkLoggedIn,
-  getLoginStatus: getLoginStatus,
   passportAuth: passportAuth
 };

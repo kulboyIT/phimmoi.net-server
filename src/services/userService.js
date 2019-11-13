@@ -19,7 +19,7 @@ let addNewUser = (newUser) => {
                 await User.createNew(newUserItem);
                 resolve({type: "succeed", message: "Thành công"});
             } else {
-                resolve({type: "succeed", message: "username đã tồn tại!!!"});
+                resolve({type: "fail", message: "username đã tồn tại!!!"});
             }
         } catch (error) {
             reject(error);
