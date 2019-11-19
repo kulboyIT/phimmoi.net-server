@@ -152,7 +152,7 @@ function sendAddCommentRequest(e) {
             </div>
             </div>`);
         } else {
-            alert(data.message);
+           // alert(data.message);
         }
     });
 }
