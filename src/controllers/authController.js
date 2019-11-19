@@ -7,7 +7,6 @@ let getLogout = (req, res) => {
 }
 
 let checkLoggedIn = (req, res, next) => {
-  console.log(req.body);
   if(req.body.isAuthenticated === 'false') {
     return res.send({message:'You are not logged in!!!', done: false});
   }
@@ -15,7 +14,6 @@ let checkLoggedIn = (req, res, next) => {
 }
 
 let checkLoggedOut = (req, res, next) => {
-  console.log(req.body);
   if(req.body.isAuthenticated === 'true') {
     return res.send({message:'You are logged in!!!', done: false});;
   }
