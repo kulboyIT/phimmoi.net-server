@@ -17,9 +17,11 @@ let addNewUser = (newUser) => {
                     last_name: newUser.last_name
                 }
                 await User.createNew(newUserItem);
-                resolve({type: "succeed", message: "Thành công"});
+                resolve({status: "success", user: {
+                    username: newUserItem.username
+                }, message: `Tạo mới tài khoản ${newUserItem.username} thành công!!!`});
             } else {
-                resolve({type: "fail", message: "username đã tồn tại!!!"});
+                resolve({status: "fail", message: "username đã tồn tại!!!"});
             }
         } catch (error) {
             reject(error);

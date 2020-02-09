@@ -8,14 +8,14 @@ let getLogout = (req, res) => {
 
 let checkLoggedIn = (req, res, next) => {
   if(req.body.isAuthenticated === 'false') {
-    return res.send({message:'You are not logged in!!!', done: false});
+    return res.send({message:'Bạn chưa đăng nhập!!!', status: 'fail'});
   }
   next();
 }
 
 let checkLoggedOut = (req, res, next) => {
   if(req.body.isAuthenticated === 'true') {
-    return res.send({message:'You are logged in!!!', done: false});;
+    return res.send({message:'Bạn chưa đăng xuất!!!', status: 'fail'});;
   }
   next();
 }
@@ -24,6 +24,7 @@ let passportAuth = (req, res, next) => {
   passport.authenticate("local", (err, user, info) => {
     if (err) { return console.log(err); }
     if (!user) { 
+      console.log('Tài khoản hoặc mật khẩu không đúng!!!');
       return res.json({success: false, message: 'Tài khoản hoặc mật khẩu không đúng!!!', data: ''});
     }
     req.logIn(user, function(err) {

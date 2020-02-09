@@ -143,8 +143,9 @@ function signUp() {
         if(validateRegisterForm()) {
             $.post("http://localhost:3000/register", {newUser: newUser, isAuthenticated: isAuthenticated},
                 function (data) {
-                    if(data.type === "succeed") {
+                    if(data.status === "success") {
                         $('#open-login').click();
+                        alert(data.message);
                     } else {
                         $('.register-form').find('.notifications .fail').text(data.message);
                         $('.register-form').find('.notifications .fail').show();
