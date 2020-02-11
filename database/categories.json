@@ -1,28 +1,8 @@
-{
-    "title": "Phim hành động",
-    "movie_number": 0
-}
-{
-    "title": "Phim kinh dị",
-    "movie_number": 0
-}
-{
-    "title": "Phim tâm lý",
-    "movie_number": 0
-}
-{
-    "title": "Phim viến tưởng",
-    "movie_number": 0
-}
-{
-    "title": "Phim hình sự",
-    "movie_number": 0
-}
-{
-    "title": "Phim tình cảm",
-    "movie_number": 0
-}
-{
-    "title": "Phim hài hước",
-    "movie_number": 0
-}
+{"_id":{"$oid":"5dafece519e21943a17739c4"},"title":"hành động","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dafedfcafbe1e491221fe45"},"title":"viến tưởng","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dafedfcafbe1e491221fe46"},"title":"tâm lý","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dafedfcafbe1e491221fe48"},"title":"hình sự","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dafedfcafbe1e491221fe49"},"title":"kinh dị","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dafedfcafbe1e491221fe4a"},"title":"tình cảm","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dafedfcafbe1e491221fe4b"},"title":"hài hước","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db0610df4241124c0fddf17"},"movie_number":{"$numberInt":"0"},"title":"hoạt hình","create_at":{"$numberLong":"1571840269179"},"__v":{"$numberInt":"0"}}

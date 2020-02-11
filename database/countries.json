@@ -1,29 +1,6 @@
-{
-    "country": "Trung Quốc",
-    "movie_number": 0
-}
-
-{
-    "country": "Mỹ",
-    "movie_number": 0
-}
-
-{
-    "country": "Việt Nam",
-    "movie_number": 0
-}
-
-{
-    "country": "Thái Lan",
-    "movie_number": 0
-}
-
-{
-    "country": "Nhật Bản",
-    "movie_number": 0
-}
-
-{
-    "country": "Anh",
-    "movie_number": 0
-}
+{"_id":{"$oid":"5db0006a9dde6ee2917d8860"},"title":"Thái Lan","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db0006a9dde6ee2917d8861"},"title":"Việt Nam","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db0006a9dde6ee2917d8862"},"title":"Trung Quốc","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db0006a9dde6ee2917d8863"},"title":"Nhật Bản","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db0006a9dde6ee2917d8864"},"title":"Anh","movie_number":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db0006a9dde6ee2917d8865"},"title":"Mỹ","movie_number":{"$numberInt":"0"}}

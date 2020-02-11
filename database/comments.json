@@ -1,69 +1,110 @@
-{
-    "user_id": "5db00479f1897ece80ac5162",
-    "movie_id": "5db002b831ab9470fbfd4d0a",
-    "create_at": 1571816736681,
-    "content": "Phim rất hay. Nên xem."
-}
-
-{
-    "user_id": "5db00479f1897ece80ac5162",
-    "movie_id": "5db002b831ab9470fbfd4d0a",
-    "create_at": 1571816736681,
-    "content": "Nhầm. Phim không hay"
-}
-
-{
-    "user_id": "5db00479f1897ece80ac5163",
-    "movie_id": "5db002b831ab9470fbfd4d0a",
-    "create_at": 1571816736681,
-    "content": "Phim không hay"
-}
-
-{
-    "user_id": "5db00479f1897ece80ac5166",
-    "movie_id": "5db002b831ab9470fbfd4d0a",
-    "create_at": 1571816736681,
-    "content": "Phim không hay"
-}
-
-{
-    "user_id": "5db00479f1897ece80ac5167",
-    "movie_id": "5db002b831ab9470fbfd4d0a",
-    "create_at": 1571816736681,
-    "content": "Phim không hay"
-}
-
-{
-    "user_id": "5db00479f1897ece80ac5167",
-    "movie_id": "5db002b831ab9470fbfd4d14",
-    "create_at": 1571816736681,
-    "content": "Phim không hay"
-}
-
-{
-    "user_id": "5db00479f1897ece80ac5165",
-    "movie_id": "5db002b831ab9470fbfd4d14",
-    "create_at": 1571816736681,
-    "content": "Phim không hay"
-}
-
-{
-    "user_id": "5db00479f1897ece80ac5166",
-    "movie_id": "5db002b831ab9470fbfd4d14",
-    "create_at": 1571816736681,
-    "content": "Phim không hay"
-}
-
-{
-    "user_id": "5db00479f1897ece80ac5168",
-    "movie_id": "5db002b831ab9470fbfd4d14",
-    "create_at": 1571816736681,
-    "content": "Phim hay"
-}
-
-{
-    "user_id": "5db00479f1897ece80ac5168",
-    "movie_id": "5db002b831ab9470fbfd4d0b",
-    "create_at": 1571816736681,
-    "content": "Phim cũng được."
-}
+{"_id":{"$oid":"5db00658bfeba60883382edb"},"user_id":"5db00479f1897ece80ac5162","movie_id":"5db002b831ab9470fbfd4d0a","create_at":{"$numberLong":"1571816736681"},"content":"Phim rất hay. Nên xem."}
+{"_id":{"$oid":"5db00658bfeba60883382edc"},"user_id":"5db00479f1897ece80ac5166","movie_id":"5db002b831ab9470fbfd4d0a","create_at":{"$numberLong":"1571816736681"},"content":"Phim không hay"}
+{"_id":{"$oid":"5db00658bfeba60883382edd"},"user_id":"5db00479f1897ece80ac5167","movie_id":"5db002b831ab9470fbfd4d0a","create_at":{"$numberLong":"1571816736681"},"content":"Phim không hay"}
+{"_id":{"$oid":"5db00658bfeba60883382ede"},"user_id":"5db00479f1897ece80ac5163","movie_id":"5db002b831ab9470fbfd4d0a","create_at":{"$numberLong":"1571816736681"},"content":"Phim không hay"}
+{"_id":{"$oid":"5db00658bfeba60883382edf"},"user_id":"5db00479f1897ece80ac5165","movie_id":"5db002b831ab9470fbfd4d14","create_at":{"$numberLong":"1571816736681"},"content":"Phim không hay"}
+{"_id":{"$oid":"5db00658bfeba60883382ee0"},"user_id":"5db00479f1897ece80ac5167","movie_id":"5db002b831ab9470fbfd4d14","create_at":{"$numberLong":"1571816736681"},"content":"Phim không hay"}
+{"_id":{"$oid":"5db00658bfeba60883382ee1"},"user_id":"5db00479f1897ece80ac5166","movie_id":"5db002b831ab9470fbfd4d14","create_at":{"$numberLong":"1571816736681"},"content":"Phim không hay"}
+{"_id":{"$oid":"5db00658bfeba60883382ee2"},"user_id":"5db00479f1897ece80ac5168","movie_id":"5db002b831ab9470fbfd4d14","create_at":{"$numberLong":"1571816736681"},"content":"Phim hay"}
+{"_id":{"$oid":"5db00658bfeba60883382ee3"},"user_id":"5db00479f1897ece80ac5162","movie_id":"5db002b831ab9470fbfd4d0a","create_at":{"$numberLong":"1571816736681"},"content":"Nhầm. Phim không hay"}
+{"_id":{"$oid":"5db00658bfeba60883382ee4"},"user_id":"5db00479f1897ece80ac5168","movie_id":"5db002b831ab9470fbfd4d0b","create_at":{"$numberLong":"1571816736681"},"content":"Phim cũng được."}
+{"_id":{"$oid":"5db2bd52f2745c0b588aee1c"},"content":"Binh luan moi","movie_id":"5db002b831ab9470fbfd4d0f","user_id":"5db2b6d681768725c4862a88","create_at":{"$numberLong":"1571994962855"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db2be8af2745c0b588aee1d"},"content":"sdfasdfasdfasdffffffffffffffffffffffffffffffffffffffffasdfasdfasdfasdfasdfasdfasdfasdfasdfdfasdfasdfffffa sdfd fdf asdfasdf","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db2b6d681768725c4862a88","create_at":{"$numberLong":"1571995274366"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db2c0a49a9bb10b583c6d53"},"content":"afasfadfsdfafadfadfafadfadf","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5db2b6d681768725c4862a88","create_at":{"$numberLong":"1571995812890"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db39e7bd6be511de4bb17d7"},"content":"dfasdfasdfasdfasdfasdfasdfasd","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db2b6d681768725c4862a88","create_at":{"$numberLong":"1572052603216"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db3a19dd6be511de4bb17d8"},"content":"asdfasdfa","movie_id":"5db002b831ab9470fbfd4d12","user_id":"5db2b6d681768725c4862a88","create_at":{"$numberLong":"1572053405515"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db3a1cbd6be511de4bb17d9"},"content":"asdfasdfas","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db2b6d681768725c4862a88","create_at":{"$numberLong":"1572053451474"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db3a342d6be511de4bb17da"},"content":"phim hay qua","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db2b6d681768725c4862a88","create_at":{"$numberLong":"1572053826050"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db3a34bd6be511de4bb17db"},"content":"sdfasdfasdfasdf","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db2b6d681768725c4862a88","create_at":{"$numberLong":"1572053835633"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db3a3b5d6be511de4bb17dc"},"content":"Phim quá chán. xem tốn thời gian vl.","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db2b6d681768725c4862a88","create_at":{"$numberLong":"1572053941090"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db3a3c5d6be511de4bb17dd"},"content":"phim chan","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db2b6d681768725c4862a88","create_at":{"$numberLong":"1572053957515"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db4f287c24fda31f0b2ea6f"},"content":"alo","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db2b6d681768725c4862a88","create_at":{"$numberLong":"1572139655581"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db5c99f7c1c973b9410ac3c"},"content":"day la comment cua toi","movie_id":"5db002b831ab9470fbfd4d0f","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572194719777"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db5cd1e21e2e53ec41718d6"},"content":"comment moi ne","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572195614427"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db5d14acf30ac01fc32ab8d"},"content":"hahahaha","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572196682178"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db5d16fcf30ac01fc32ab8e"},"content":"hahahahaha","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572196719766"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db5d421dbbaa733ec7af506"},"content":"phim hay day chu","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572197409364"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db5d52cdbbaa733ec7af507"},"content":"alsdkfasdfasd","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572197676573"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db5d54fdbbaa733ec7af508"},"content":"asdfasdfasdfasdf","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572197711541"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db791fd81bc2742a0294374"},"content":"new comment here","movie_id":"5db1063ed5755e2edc023b7e","user_id":"5db5ba7398f00f15d0154359","create_at":{"$numberLong":"1572311549704"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db7920081bc2742a0294375"},"content":"asdfasdfasdf","movie_id":"5db1063ed5755e2edc023b7e","user_id":"5db5ba7398f00f15d0154359","create_at":{"$numberLong":"1572311552535"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db7921a81bc2742a0294376"},"content":"asdfasdfasdfasdf","movie_id":"5db002b831ab9470fbfd4d0b","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572311578408"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db7922981bc2742a0294377"},"content":"phim chán.","movie_id":"5db10671d5755e2edc023b83","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572311593544"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db7979a81bc2742a0294378"},"content":"alolalalalalalal hahahah","movie_id":"5db002b831ab9470fbfd4d0a","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572312986971"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db7ad9036d66f1f74561800"},"content":"hahahahahahahahaha","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572318608063"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db7ae91d95b4833ac8e2591"},"content":"fasdjfhasjdfad","movie_id":"5db002b831ab9470fbfd4d0e","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572318865482"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db7aeaed95b4833ac8e2592"},"content":"hihihihihih","movie_id":"5db002b831ab9470fbfd4d0b","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572318894370"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db7af11a02d5a0e7443a060"},"content":"hahahahaha1","movie_id":"5db002b831ab9470fbfd4d11","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572318993012"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db7b02d3cbd76295c55b87d"},"content":"ádfasdfasdf","movie_id":"5db1065cd5755e2edc023b81","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572319277843"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db7fda44fb8b13dd4c68948"},"content":"hahahahahaha","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572339108011"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db7fdb54fb8b13dd4c68949"},"content":"pphim rt chan","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572339125947"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db8640adedc17204c15b732"},"content":"phim rất hay","movie_id":"5db002b831ab9470fbfd4d15","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572365322759"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db86411dedc17204c15b733"},"content":"phim hay nên xem","movie_id":"5db002b831ab9470fbfd4d15","user_id":"5db5c7af1654db102421a939","create_at":{"$numberLong":"1572365329011"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db87077dedc17204c15b734"},"content":"alskdjfalsdf","movie_id":"5db002b831ab9470fbfd4d0b","user_id":"5db5b01cf14b5d312c0f5852","create_at":{"$numberLong":"1572368503517"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5db8707fdedc17204c15b735"},"content":"asdfasdasdfasdfasd","movie_id":"5db002b831ab9470fbfd4d0b","user_id":"5db5b01cf14b5d312c0f5852","create_at":{"$numberLong":"1572368511300"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4d0a6e14bac39c08b8aa6"},"content":"asdfasdf","movie_id":"5db002b831ab9470fbfd4d0a","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573179558438"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4d0f0e14bac39c08b8aa7"},"content":"phim chan om","movie_id":"5db002b831ab9470fbfd4d0a","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573179632986"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4d1fde14bac39c08b8aa9"},"content":"asdf","movie_id":"5db002b831ab9470fbfd4d10","user_id":"5dc4d12de14bac39c08b8aa8","create_at":{"$numberLong":"1573179901484"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4d518845b96250cf4b374"},"content":"asdfasdfasdf","movie_id":"5db002b831ab9470fbfd4d10","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573180696636"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4d5d413f55e002025c76d"},"content":"ádfasdf","movie_id":"5db1065cd5755e2edc023b81","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573180884101"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4d60a13f55e002025c76e"},"content":"ádfasdfasdf","movie_id":"5db002b831ab9470fbfd4d15","user_id":"5dc4d12de14bac39c08b8aa8","create_at":{"$numberLong":"1573180938044"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4d67913f55e002025c76f"},"content":"asdfasdfasdfasd","movie_id":"5db1062dd5755e2edc023b7d","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573181049927"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4e0d5f787271f34cc8f59"},"content":"hahahahaha","movie_id":"5db002b831ab9470fbfd4d0c","create_at":{"$numberLong":"1573183701294"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4e16395841a39002181ce"},"content":"new comment here","movie_id":"5db002b831ab9470fbfd4d0c","create_at":{"$numberLong":"1573183843185"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4e1b395841a39002181cf"},"content":"new comment","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dc4d12de14bac39c08b8aa8","create_at":{"$numberLong":"1573183923691"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4e2802fe2470bf4b2b5c4"},"content":"hahaha","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dc4d12de14bac39c08b8aa8","create_at":{"$numberLong":"1573184128510"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4e29b2fe2470bf4b2b5c5"},"content":"asdfasdfasdfasdf","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573184155692"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc4e366f041bd2c480d06d8"},"content":"lllllllllllllllllllllll","movie_id":"5db002b831ab9470fbfd4d10","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573184358785"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dc51a64b4c9823394d6c8bb"},"content":"phim hay","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573198436738"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dca853aedda7b0b08565c46"},"content":"","movie_id":"5db002b831ab9470fbfd4d13","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573553466256"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dca853aedda7b0b08565c47"},"content":"","movie_id":"5db002b831ab9470fbfd4d13","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573553466475"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dca853bedda7b0b08565c48"},"content":"","movie_id":"5db002b831ab9470fbfd4d13","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573553467139"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dca853bedda7b0b08565c49"},"content":"","movie_id":"5db002b831ab9470fbfd4d13","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573553467483"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dca853bedda7b0b08565c4a"},"content":"","movie_id":"5db002b831ab9470fbfd4d13","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573553467826"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dca853cedda7b0b08565c4b"},"content":"","movie_id":"5db002b831ab9470fbfd4d13","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573553468034"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dca853cedda7b0b08565c4c"},"content":"","movie_id":"5db002b831ab9470fbfd4d13","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573553468227"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dca8549edda7b0b08565c4d"},"content":"","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573553481140"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dca8549edda7b0b08565c4e"},"content":"","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573553481723"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dca854aedda7b0b08565c4f"},"content":"","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573553482099"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcb75b22aa72b1524eedbea"},"content":"","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573615026523"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcb75b32aa72b1524eedbeb"},"content":"","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573615027130"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcb75b32aa72b1524eedbec"},"content":"","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573615027584"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcb75cb2aa72b1524eedbed"},"content":"","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573615051987"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcb75d92aa72b1524eedbee"},"content":"","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dc4d12de14bac39c08b8aa8","create_at":{"$numberLong":"1573615065842"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcb75da2aa72b1524eedbef"},"content":"","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dc4d12de14bac39c08b8aa8","create_at":{"$numberLong":"1573615066701"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcb7a0c8a385020e4f46af6"},"content":"123","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573616140824"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbb70358cf4e118885cf27"},"content":"hahahaha","movie_id":"5db002b831ab9470fbfd4d0b","user_id":"","create_at":{"$numberLong":"1573631747781"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbb9e158cf4e118885cf28"},"content":"asdfasdfasdfas","movie_id":"5db002b831ab9470fbfd4d0e","user_id":"","create_at":{"$numberLong":"1573632481383"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbbaad58cf4e118885cf29"},"content":"asdf","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573632685006"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbc6310c706025f89dd5c4"},"content":"hahahaha","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573635633219"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbc63d0c706025f89dd5c5"},"content":"lalala","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573635645007"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbd9b4c7bfaf36f4c701d9"},"content":"phim hay","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573640628512"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbd9dcc7bfaf36f4c701da"},"content":"phim chán lắm đừng xem","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573640668425"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbdb89c7bfaf36f4c701db"},"content":"phim chán lắm đừng xem","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573641097775"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbdd09c7bfaf36f4c701dc"},"content":"phim chán lắm đừng xem","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573641481437"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbdd16c7bfaf36f4c701dd"},"content":"phim chán lắm đừng xem","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573641494425"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbdd40c7bfaf36f4c701de"},"content":"phim chán lắm đừng xem","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573641536366"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbdd4dc7bfaf36f4c701df"},"content":"phim chán lắm đừng xem","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573641549930"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbddbac7bfaf36f4c701e0"},"content":"phim chán lắm đừng xem","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573641658479"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcbddc7c7bfaf36f4c701e1"},"content":"phim chán lắm đừng xem","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573641671866"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcd7c698e57c80ec0acd887"},"content":"phim chán lắm đừng xem","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573747817958"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcd8f6282fed12380004b57"},"content":"phim chán lắm đừng xem","movie_id":"5db10671d5755e2edc023b83","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573752674523"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce47c696b8a61bb06ca46b"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573799878627"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce47f296b8a61bb06ca46c"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573799922259"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce484096b8a61bb06ca46d"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573800000008"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce484096b8a61bb06ca46e"},"content":"Phim cũng được!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573800000374"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce484196b8a61bb06ca46f"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573800001424"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce484296b8a61bb06ca470"},"content":"Phim cũng được!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573800002357"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce498b96b8a61bb06ca471"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573800331094"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce4b1296b8a61bb06ca472"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573800722548"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce554e809ec6425091e228"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573803342644"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce555e809ec6425091e229"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573803358803"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce557b809ec6425091e22a"},"content":"Phim cũng được!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573803387312"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce57fb809ec6425091e22c"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573804027333"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce586b809ec6425091e22d"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573804139022"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce5879809ec6425091e22e"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573804153315"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dce5895809ec6425091e22f"},"content":"Phim cũng được!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573804181777"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcf7791f1690749e81febc3"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573877649323"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcf779df1690749e81febc4"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573877661935"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcf77b6f1690749e81febc5"},"content":"Phim cũng được!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573877686893"},"__v":{"$numberInt":"0"}}
+{"_id":{"$oid":"5dcf7f3af1690749e81febc7"},"content":"Phim không hay!","movie_id":"5db002b831ab9470fbfd4d0c","user_id":"5dbbff0eb074290ad88699d0","create_at":{"$numberLong":"1573879610812"},"__v":{"$numberInt":"0"}}
